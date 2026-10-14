@@ -1,0 +1,71 @@
+{
+    "name":  "Stadtclub-Quiz – Fan-Projekt von Thomas \u0026 Nobbe",
+    "short_name":  "Stadtclub-Quiz",
+    "description":  "Inoffizielles Fan-Projekt der VfR-Hardcore-Fans Thomas \u0026 Nobbe: VfR-Heilbronn-Wissen in 7 Spieltagen mit Quiz, Humor und Zertifikaten. Deutsch, English, Schwäbisch. Läuft auch offline.",
+    "id":  "./",
+    "start_url":  "./",
+    "scope":  "./",
+    "display":  "standalone",
+    "display_override":  [
+                             "standalone",
+                             "minimal-ui"
+                         ],
+    "orientation":  "any",
+    "background_color":  "#ffffff",
+    "theme_color":  "#0d0d0d",
+    "lang":  "de",
+    "dir":  "ltr",
+    "categories":  [
+                       "sports",
+                       "entertainment"
+                   ],
+    "prefer_related_applications":  false,
+    "icons":  [
+                  {
+                      "purpose":  "any",
+                      "type":  "image/png",
+                      "sizes":  "192x192",
+                      "src":  "icon-192.png"
+                  },
+                  {
+                      "purpose":  "any",
+                      "type":  "image/png",
+                      "sizes":  "512x512",
+                      "src":  "icon-512.png"
+                  },
+                  {
+                      "purpose":  "maskable",
+                      "type":  "image/png",
+                      "sizes":  "512x512",
+                      "src":  "icon-maskable-512.png"
+                  }
+              ],
+    "shortcuts":  [
+                      {
+                          "url":  "./#lesson-boss",
+                          "description":  "Direkt in die Bossrunde",
+                          "name":  "Bossrunde",
+                          "icons":  [
+                                        {
+                                            "type":  "image/png",
+                                            "sizes":  "192x192",
+                                            "src":  "icon-192.png"
+                                        }
+                                    ],
+                          "short_name":  "Boss"
+                      },
+                      {
+                          "url":  "./#home",
+                          "description":  "Zur Übersicht mit deinen Zertifikaten",
+                          "name":  "Zertifikate",
+                          "icons":  [
+                                        {
+                                            "type":  "image/png",
+                                            "sizes":  "192x192",
+                                            "src":  "icon-192.png"
+                                        }
+                                    ],
+                          "short_name":  "Zertifikate"
+                      }
+                  ]
+}

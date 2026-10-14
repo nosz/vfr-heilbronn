@@ -1,0 +1,956 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="application-name" content="Stadtclub-Quiz">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Stadtclub-Quiz">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<title>Stadtclub-Quiz</title>
+<meta name="description" content="DE: 7 Spieltage, Zertifikate, Humor. EN: 7 matchdays, certificates, fun. SCHWÄB: 7 Spieltag, Zertifikat, Gaudi.">
+<meta name="color-scheme" content="light dark">
+<meta name="theme-color" content="#0d0d0d">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 1 16 9' shape-rendering='crispEdges'%3E%3Crect x='2' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='4' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='6' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='10' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='12' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='13' y='1' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='1' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='2' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='4' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='8' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='13' y='2' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='14' y='2' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='0' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='1' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='2' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='4' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='13' y='3' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='14' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='15' y='3' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='0' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='1' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='2' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='4' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='13' y='4' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='14' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='15' y='4' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='2' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='5' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='4' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='5' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='5' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='5' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='5' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='13' y='5' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='6' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='4' y='6' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='6' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='6' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='6' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='6' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='6' width='1' height='1' fill='%23c62d33'/%3E%3Crect x='10' y='6' width='1' height='1' fill='%23c62d33'/%3E%3Crect x='11' y='6' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='6' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='7' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='4' y='7' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='7' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='7' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='7' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='7' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='7' width='1' height='1' fill='%23c62d33'/%3E%3Crect x='10' y='7' width='1' height='1' fill='%23c62d33'/%3E%3Crect x='11' y='7' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='7' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='4' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='8' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='6' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='8' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='8' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='8' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='10' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='8' width='1' height='1' fill='%23ffffff'/%3E%3Crect x='12' y='8' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='3' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='4' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='5' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='6' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='7' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='8' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='9' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='10' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='11' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3Crect x='12' y='9' width='1' height='1' fill='%230d0d0d'/%3E%3C/svg%3E">
+<link rel="icon" type="image/png" sizes="64x64" href="favicon.png">
+<link rel="icon" type="image/png" sizes="192x192" href="icon-192.png">
+<link rel="icon" type="image/png" sizes="512x512" href="icon-512.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="canonical" href="https://nosz.github.io/vfrheilbronn/">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Stadtclub-Quiz">
+<meta property="og:title" content="VfR Stadtclub-Quiz von Thomas & Nobbe">
+<meta property="og:description" content="DE: 7 Spieltage, Zertifikate, Humor. EN: 7 matchdays, certificates, fun. SCHWÄB: 7 Spieltag, Zertifikat, Gaudi.">
+<meta property="og:url" content="https://nosz.github.io/vfrheilbronn/">
+<meta property="og:image" content="https://nosz.github.io/vfrheilbronn/vfrheilbronn_vorschau.jpg?v=1">
+<meta property="og:image:type" content="image/jpeg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Stadtclub-Quiz: schwarz-weißes Trikot, Fußball und Sterne. Was weißt du über den VfR Heilbronn? What do you know about VfR Heilbronn? Was woisch du iber da VfR Hoilbronn?">
+<meta property="og:locale" content="de_DE">
+<meta property="og:locale:alternate" content="en_GB">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="VfR Stadtclub-Quiz von Thomas & Nobbe">
+<meta name="twitter:description" content="DE: 7 Spieltage, Zertifikate, Humor. EN: 7 matchdays, certificates, fun. SCHWÄB: 7 Spieltag, Zertifikat, Gaudi.">
+<meta name="twitter:image" content="https://nosz.github.io/vfrheilbronn/vfrheilbronn_vorschau.jpg?v=1">
+<style>
+:root{
+  --red:#c62d33;--red-d:#1a1a1a;--red-l:#f0f0f0;--herobg:linear-gradient(135deg,#ececec,#d9d9d9);
+  --bg:#f4f4f4;--card:#ffffff;--ink:#1f2026;--mute:#565860;--line:#e1e2e5;
+  --blue:#2a4bd7;--green:#1b7a3d;--gold:#ffc800;--gold-ink:#5a4500;--purple:#6b3fa0;
+  --ok:#157a3a;--okbg:#e6f6ec;--bad:#b3261e;--badbg:#fdecea;
+  --shadow:0 4px 0 rgba(0,0,0,.08),0 8px 22px rgba(0,0,0,.08);
+  --r:20px;
+  --font:"Trebuchet MS","Segoe UI","Hiragino Maru Gothic ProN","Yu Gothic UI","Meiryo",system-ui,-apple-system,sans-serif;
+}
+:root[data-theme="dark"]{
+  --red:#ff6b70;--red-d:#c62d33;--red-l:#2a2a2a;--herobg:linear-gradient(135deg,#2a2a2a,#3b1b1d);
+  --bg:#15161a;--card:#202228;--ink:#f1f2f4;--mute:#b4b6bd;--line:#34363e;
+  --blue:#5db8f0;--green:#5ccf86;--gold:#ffc800;--gold-ink:#ffe28a;--purple:#b794f0;
+  --ok:#5ccf86;--okbg:#17301f;--bad:#ff8a80;--badbg:#3a1d1b;
+  --shadow:0 4px 0 rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);
+}
+@media(prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --red:#ff6b70;--red-d:#c62d33;--red-l:#2a2a2a;--herobg:linear-gradient(135deg,#2a2a2a,#3b1b1d);
+    --bg:#15161a;--card:#202228;--ink:#f1f2f4;--mute:#b4b6bd;--line:#34363e;
+    --blue:#5db8f0;--green:#5ccf86;--gold:#ffc800;--gold-ink:#ffe28a;--purple:#b794f0;
+    --ok:#5ccf86;--okbg:#17301f;--bad:#ff8a80;--badbg:#3a1d1b;
+    --shadow:0 4px 0 rgba(0,0,0,.35),0 8px 22px rgba(0,0,0,.35);
+  }
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--ink);font:1rem/1.6 var(--font);-webkit-text-size-adjust:100%}
+a{color:var(--blue)}
+button{font:inherit;cursor:pointer}
+.skip{position:absolute;left:-999px;top:8px;background:var(--ink);color:var(--bg);padding:10px 14px;border-radius:10px;z-index:100}
+.skip:focus{left:8px}
+:focus-visible{outline:3px solid var(--blue);outline-offset:3px}
+/* Kopf */
+.top{background:#0d0d0d;color:#fff;position:sticky;top:0;z-index:20;border-bottom:3px solid #c62d33;box-shadow:0 3px 0 rgba(0,0,0,.18)}
+:root[data-theme="dark"] .top{background:#0d0d0d}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .top{background:#0d0d0d}}
+.topin{max-width:1060px;margin:0 auto;padding:8px 16px;display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+.brand{display:flex;align-items:center;gap:10px;color:#fff;text-decoration:none;font-weight:800;font-size:1.15rem;letter-spacing:.2px;min-height:44px;background:none;border:0;padding:0}
+.brand .dot svg{width:24px;height:auto;display:block}.brand .dot{width:34px;height:34px;border-radius:50%;background:#fff;color:var(--red-d);display:grid;place-items:center;font-size:1.2rem;box-shadow:0 2px 0 rgba(0,0,0,.2)}
+.brand{text-align:left;line-height:1.2}.brand small{display:block;font-weight:800;font-size:.98rem;opacity:1;letter-spacing:.1px;margin-top:2px;line-height:1.25}
+.spacer{flex:1}
+.pill{background:rgba(0,0,0,.2);border-radius:999px;padding:6px 12px;font-weight:700;font-size:.9rem;white-space:nowrap}
+.lang{display:flex;gap:6px}
+.lang button,.theme{min-height:44px;min-width:44px;padding:6px 12px;border-radius:999px;border:2px solid rgba(255,255,255,.7);background:transparent;color:#fff;font-weight:700}
+.lang button[aria-pressed="true"]{background:#fff;color:var(--red-d)}
+.theme{font-size:1.1rem;padding:6px}
+/* Layout */
+main{max-width:1060px;margin:0 auto;padding:20px 16px 90px;outline:none}
+.hero{background:var(--card);border-radius:28px;box-shadow:var(--shadow);padding:22px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center;position:relative;overflow:hidden;border:2px solid var(--line)}
+.hero::before{content:"";position:absolute;right:-60px;top:-60px;width:220px;height:220px;border-radius:50%;background:var(--herobg)}
+.hero>*{position:relative}
+.hero h1{margin:0 0 6px;font-size:clamp(1.5rem,4.5vw,2.2rem);line-height:1.2}
+.hero p{margin:0 0 12px;color:var(--mute)}
+.stats{display:flex;gap:10px;flex-wrap:wrap}
+.chip{display:inline-flex;align-items:center;gap:6px;background:var(--bg);border:2px solid var(--line);border-radius:999px;padding:6px 14px;font-weight:700}
+.chip.coin b{color:#3b2d00;background:var(--gold);border-radius:50%;width:22px;height:22px;display:grid;place-items:center;font-size:.8rem}
+.ring{--p:0;width:112px;height:112px;border-radius:50%;background:conic-gradient(var(--red) calc(var(--p)*1%),var(--line) 0);display:grid;place-items:center;transition:background .6s}
+.ring span{width:84px;height:84px;border-radius:50%;background:var(--card);display:grid;place-items:center;font-weight:800;font-size:1.3rem}
+h2.sec{margin:28px 0 12px;font-size:1.3rem}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(260px,1fr));gap:16px}
+.lcard{--c:var(--red);text-align:left;background:var(--card);border:2px solid var(--line);border-top:8px solid var(--c);border-radius:var(--r);padding:16px;box-shadow:var(--shadow);color:var(--ink);display:flex;flex-direction:column;gap:6px;min-height:170px;transition:transform .18s,box-shadow .18s;animation:pop .5s both}
+.lcard:hover{transform:translateY(-4px) rotate(-.4deg)}
+.lcard:active{transform:translateY(1px)}
+.lcard .ico{font-size:2rem;line-height:1}
+.lcard h3{margin:0;font-size:1.08rem;line-height:1.3}
+.lcard p{margin:0;color:var(--mute);font-size:.92rem}
+.lcard .foot{margin-top:auto;display:flex;justify-content:space-between;align-items:center;font-size:.9rem;color:var(--mute);font-weight:700}
+.stars{letter-spacing:2px;font-size:1.15rem}
+.stars .off{opacity:.3;filter:grayscale(1)}
+.nr{font-weight:800;color:var(--c)}
+@keyframes pop{from{opacity:0;transform:translateY(14px) scale(.96)}to{opacity:1;transform:none}}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:48px;padding:10px 22px;border-radius:999px;border:0;background:var(--red-d);color:#fff;font-weight:800;box-shadow:0 4px 0 rgba(0,0,0,.25);transition:transform .12s,box-shadow .12s;text-decoration:none}
+:root[data-theme="dark"] .btn{background:#c62d33}
+@media(prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{background:#c62d33}}
+.btn:hover{filter:brightness(1.08)}
+.btn:active{transform:translateY(3px);box-shadow:0 1px 0 rgba(0,0,0,.25)}
+.btn.ghost{background:var(--card)!important;color:var(--ink);border:2px solid var(--line);box-shadow:0 3px 0 rgba(0,0,0,.08)}
+.crumb{display:flex;gap:12px;flex-wrap:nowrap;align-items:center;margin:0 0 16px;min-width:0}
+.ctx{flex:1;min-width:0;color:var(--mute);font-weight:700;font-size:.9rem;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.back{display:inline-flex;align-items:center;gap:4px;flex:none;min-height:44px;padding:8px 16px 8px 8px;border-radius:999px;border:2px solid var(--line);background:var(--card);color:var(--ink);font-weight:800;box-shadow:0 3px 0 rgba(0,0,0,.08);transition:transform .12s}
+.back svg{color:var(--red);flex:none}
+.back:hover{transform:translateX(-2px)}.back:active{transform:translateY(2px);box-shadow:none}
+/* Lektion */
+.lhead{display:flex;gap:14px;align-items:center;margin-bottom:14px}
+.lhead .big{font-size:3rem;animation:wob 2.4s ease-in-out infinite}
+@keyframes wob{0%,100%{transform:rotate(-6deg)}50%{transform:rotate(6deg) translateY(-4px)}}
+.lhead h1{margin:0;font-size:clamp(1.4rem,4.5vw,2rem);line-height:1.25}
+.lhead p{margin:0;color:var(--mute)}
+.card{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:16px 18px;margin:0 0 14px;box-shadow:var(--shadow);animation:pop .5s both}
+.card h2{margin:0 0 6px;font-size:1.1rem}
+.card p{margin:0}
+.card .n{display:inline-grid;place-items:center;width:30px;height:30px;border-radius:50%;background:var(--red-d);color:#fff;font-weight:800;margin-right:8px;font-size:.9rem}
+.bubble{background:var(--gold);color:#3b2d00;border-radius:22px 22px 22px 6px;padding:14px 18px;margin:18px 0;font-weight:700;box-shadow:0 4px 0 rgba(0,0,0,.12);animation:pop .5s .25s both}
+:root[data-theme="dark"] .bubble{color:#2a2000}
+.bubble small{display:block;font-weight:800;letter-spacing:.5px;text-transform:uppercase;font-size:.75rem;margin-bottom:2px}
+details.pro{background:var(--card);border:2px dashed var(--c,var(--red));border-radius:var(--r);padding:0;margin:0 0 14px}
+details.pro summary{min-height:48px;padding:12px 18px;font-weight:800;cursor:pointer;list-style:none;display:flex;gap:8px;align-items:center}
+details.pro summary::-webkit-details-marker{display:none}
+details.pro summary::before{content:"\1F3C6";font-size:1.2rem}
+details.pro[open] summary::before{content:"\2B50"}
+details.pro p{margin:0;padding:0 18px 16px}
+.src{font-size:.9rem;color:var(--mute);margin:16px 0}
+.src ul{margin:6px 0 0;padding-left:20px}
+.src li{margin:4px 0}
+.sticky{position:sticky;bottom:0;display:flex;justify-content:center;margin:18px -16px 0;padding:22px 16px calc(12px + env(safe-area-inset-bottom));background:linear-gradient(to bottom,transparent,var(--bg) 34%);z-index:10}.next{margin:16px 0 0}.next .btn{width:100%;min-height:52px;font-size:1.05rem}.sticky .btn{width:100%;max-width:420px;min-height:52px;font-size:1.05rem}
+/* Quiz */
+.dots{display:flex;gap:6px;margin:0 0 16px}
+.dots i{flex:1;height:10px;border-radius:99px;background:var(--line);transition:background .3s}
+.dots i.on{background:var(--ok)}
+.dots i.no{background:var(--bad)}
+.dots i.cur{background:var(--blue)}
+.qq{font-size:clamp(1.15rem,3.8vw,1.5rem);line-height:1.35;margin:0 0 16px}
+.opts{display:grid;gap:10px}
+.opt{display:flex;gap:12px;align-items:center;text-align:left;width:100%;min-height:56px;padding:12px 16px;border-radius:16px;border:2px solid var(--line);background:var(--card);color:var(--ink);box-shadow:0 3px 0 rgba(0,0,0,.08);transition:transform .12s,border-color .12s}
+.opt:hover:not(:disabled){border-color:var(--blue);transform:translateX(3px)}
+.opt .k{flex:none;width:32px;height:32px;border-radius:50%;background:var(--bg);border:2px solid var(--line);display:grid;place-items:center;font-weight:800;font-size:.9rem}
+.opt.right{background:var(--okbg);border-color:var(--ok);animation:hop .45s}
+.opt.wrong{background:var(--badbg);border-color:var(--bad);animation:shake .4s}
+.opt:disabled{cursor:default;color:var(--ink)}
+.opt.dim{opacity:.7}
+@keyframes hop{30%{transform:scale(1.03) translateY(-4px)}}
+@keyframes shake{25%{transform:translateX(-6px)}75%{transform:translateX(6px)}}
+.fb{margin:16px 0 0;padding:14px 16px;border-radius:16px;font-weight:600}
+.fb.ok{background:var(--okbg);border:2px solid var(--ok)}
+.fb.bad{background:var(--badbg);border:2px solid var(--bad)}
+.fb b{display:block;margin-bottom:2px}
+.res{text-align:center;padding:10px 0}
+.res .bigstars{display:inline-block;font-size:2.6rem;line-height:1.3;letter-spacing:6px;color:#ffc800;background:#26272e;border-radius:999px;padding:2px 22px 0 28px;box-shadow:0 4px 0 rgba(0,0,0,.25)}
+.res .bigstars span{display:inline-block;animation:star .6s both}
+.res .bigstars span:nth-child(2){animation-delay:.2s}.res .bigstars span:nth-child(3){animation-delay:.4s}
+.res .bigstars .off{animation:none;color:#8a8c92}
+@keyframes star{from{transform:scale(0) rotate(-180deg)}to{transform:none}}
+.res h1{margin:6px 0}
+.row{display:flex;gap:10px;flex-wrap:wrap;justify-content:center;margin-top:18px}
+footer{max-width:1060px;margin:0 auto;padding:0 16px 40px;color:var(--mute);font-size:.88rem}
+footer p{margin:6px 0}
+.conf{position:fixed;inset:0;pointer-events:none;overflow:hidden;z-index:50}
+.conf i{position:absolute;top:-20px;width:10px;height:16px;border-radius:2px;animation:fall 2.2s linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg);opacity:.9}}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+@media(max-width:560px){
+  .brand{flex:1 1 0;min-width:0}.brand small{white-space:normal}.pill{display:none}.topin .lang{order:3;flex:1 1 100%}.lang button{flex:1;min-width:0}.spacer{display:none}.pill{margin-left:auto}.chip{padding:3px 11px;font-size:.84rem;min-height:40px}button.chip{min-height:40px}.stats{gap:8px}.hero::before{width:130px;height:130px;right:-46px;top:-46px;opacity:.75}.hero{padding:16px;gap:12px}.ring{width:72px;height:72px}.ring span{width:54px;height:54px;font-size:1rem}.hero p{font-size:.95rem}
+  .topin{padding:8px 12px}
+  main{padding:14px 12px 90px}
+}
+.choices{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:16px 0 4px}
+.choices:has(.choice:only-child){grid-template-columns:1fr}
+.choice{display:flex;gap:14px;align-items:center;text-align:left;min-height:84px;padding:14px 20px;border-radius:22px;border:2px solid var(--line);background:var(--card);color:var(--ink);box-shadow:var(--shadow);transition:transform .15s;animation:pop .5s .1s both}
+.choice:hover{transform:translateY(-3px)}
+.choice .ci{font-size:2.2rem;line-height:1}
+.choice b{display:block;font-size:1.15rem}
+.choice small{display:block;font-size:.92rem;opacity:.92}
+.choice.pri{background:var(--red-d);color:#fff;border-color:transparent}
+.ach{margin-top:10px;padding:10px 14px;border-radius:14px;background:var(--gold);color:#3b2d00;font-weight:800;animation:pop .5s both}
+.nameq{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:16px 18px;margin:14px 0 0;box-shadow:var(--shadow);display:grid;gap:6px;animation:pop .5s both}
+.nameq label{font-weight:800;font-size:1.1rem}
+.nameq small{color:var(--mute)}
+.nameq input{min-height:48px;font:inherit;font-size:1rem;padding:10px 14px;border-radius:14px;border:2px solid var(--line);background:var(--bg);color:var(--ink);margin-top:4px}
+.linkbtn{background:none;border:0;color:var(--blue);font-weight:800;text-decoration:underline;min-height:44px;padding:6px 8px}
+.qp{margin:0 0 6px;font-weight:800;color:var(--blue)}
+button.chip{font:inherit;font-weight:700;color:var(--ink);cursor:pointer;min-height:40px}
+.nlink{display:inline-flex;align-items:center;min-height:44px;font-weight:800;color:var(--blue)}
+.pitch{text-align:center;color:var(--mute);margin:10px 0 0;font-weight:700}
+@media(max-width:560px){.choices{grid-template-columns:1fr}.res .row,.main>.row{flex-direction:column;align-items:stretch}.res~.row{flex-direction:column;align-items:stretch}.res~.row .btn,.certbox~.row .btn{width:100%}}.top{padding-top:env(safe-area-inset-top)}
+.snack{position:fixed;left:12px;right:12px;bottom:calc(12px + env(safe-area-inset-bottom));z-index:60;max-width:520px;margin:0 auto;background:#26272e;color:#fff;border-radius:16px;padding:12px 14px;display:flex;gap:12px;align-items:center;box-shadow:0 8px 24px rgba(0,0,0,.35);animation:pop .4s both}
+.snack span{flex:1;font-weight:700}
+.snack button{min-height:44px;padding:8px 16px;border-radius:999px;border:0;background:#ffc800;color:#3b2d00;font-weight:800}
+.instcard{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:14px 18px;margin:26px 0 0;box-shadow:var(--shadow);display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.instcard .ii{font-size:1.8rem}.instcard div{flex:1;min-width:200px}.instcard b{display:block}.instcard small{color:var(--mute)}
+@media(max-width:560px){.brand small{font-size:.9rem}}
+.spruch{background:var(--card);border:2px solid var(--line);border-left:8px solid var(--red);border-radius:var(--r);padding:12px 18px 16px;margin:18px 0 0;box-shadow:var(--shadow)}
+.spruch h2.sec{margin:4px 0 8px;font-size:1.1rem}.spruch .stag{margin:0;font-weight:800;color:var(--red)}.spruch .stxt{margin:4px 0 12px;font-size:1.05rem;font-weight:600}
+.byline{background:var(--red-l);color:var(--ink);text-align:center;font-weight:700;font-size:.85rem;padding:7px 12px;border-bottom:2px solid var(--line)}
+.stats{display:grid;grid-template-columns:1.5fr 1fr 1fr;gap:8px;margin-top:2px;grid-column:1/-1}
+.stat{background:var(--bg);border:2px solid var(--line);border-radius:14px;padding:8px 10px;min-width:0}
+.stat .sv{display:block;font-weight:800;font-size:.98rem;line-height:1.25;overflow-wrap:anywhere}
+.stat .sl{display:block;font-size:.78rem;color:var(--mute);font-weight:700;margin-top:2px}
+.namebtn{padding:6px 0;min-height:44px;text-decoration:none;color:var(--mute);font-weight:700}
+.namebtn:hover{text-decoration:underline}
+h2.secrow{display:flex;justify-content:space-between;align-items:baseline;gap:12px}
+h2.secrow .cnt{font-size:.9rem;color:var(--mute);font-weight:700}
+.lcard.nextup{box-shadow:0 0 0 3px var(--red),var(--shadow)}
+.lcard.done .nr::after{content:" ✓";color:var(--ok)}
+@media(max-width:560px){
+ .grid{grid-template-columns:1fr;gap:10px}
+ .lcard{display:grid;grid-template-columns:44px 1fr auto;grid-template-areas:"ico title foot" "ico sub foot";column-gap:12px;row-gap:2px;align-items:center;min-height:78px;padding:12px 14px;border-top:2px solid var(--line);border-left:8px solid var(--c)}
+ .lcard:hover{transform:none}
+ .lcard .ico{grid-area:ico;font-size:1.9rem;text-align:center}
+ .lcard .nr{display:none}
+ .lcard h3{grid-area:title;font-size:1rem}
+ .lcard p{grid-area:sub;font-size:.84rem}
+ .lcard .foot{grid-area:foot;flex-direction:column;align-items:flex-end;gap:2px;margin:0;font-size:.8rem}
+ .stats{grid-template-columns:1.6fr 1fr 1fr;gap:6px}.stat{padding:7px 8px}
+}
+@media print{.byline{display:none}}
+.certbox{background:var(--card);border:2px solid var(--line);border-radius:var(--r);padding:10px;box-shadow:var(--shadow);margin:14px 0;animation:pop .5s both}
+.certbox svg{display:block;width:100%;height:auto;border-radius:12px}
+.field{display:grid;gap:6px;margin:14px 0}
+.field label{font-weight:800}
+.field input{min-height:48px;font:inherit;font-size:1rem;padding:10px 14px;border-radius:14px;border:2px solid var(--line);background:var(--card);color:var(--ink)}
+.certlist{display:grid;grid-template-columns:repeat(auto-fill,minmax(220px,1fr));gap:12px}
+.certlist .btn{justify-content:flex-start;text-align:left;border-radius:16px;min-height:52px;width:100%}
+.btn.mastercard{background:#ffc800!important;color:#3b2d00;border:0;box-shadow:0 4px 0 rgba(0,0,0,.2)}
+@page{size:A4 landscape;margin:8mm}
+@media print{body{background:#fff}main>*:not(.certbox){display:none!important}.certbox{box-shadow:none;border:0;padding:0;margin:0}footer{display:none}}
+@media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
+@media print{.top,.sticky,.lang{display:none}}
+</style>
+</head>
+<body>
+<a class="skip" href="#main" id="skip">Zum Inhalt</a>
+<header class="top"><div class="topin">
+  <button type="button" class="brand" id="brand" aria-label="Stadtclub-Quiz"><span class="dot" aria-hidden="true"></span><span><span id="bt">Stadtclub-Quiz</span><small id="bs"></small></span></button>
+  <span class="spacer"></span>
+  <span class="pill" id="coins" aria-live="polite"></span>
+  <div class="lang" role="group" id="langs"></div>
+  <button type="button" class="theme" id="theme" aria-label="Hell/Dunkel">◐</button>
+</div></header>
+<main id="main" tabindex="-1"></main>
+<footer id="foot"></footer>
+<div id="live" class="sr" aria-live="polite"></div>
+<script>
+"use strict";
+const VERSION = "1.0.0", STAND = "14.10.2026";
+const LANGS = [["de","DE","Deutsch"],["en","EN","English"],["swg","SCHWÄB","Schwäbisch"]];
+const KEY = "vfr_stadtclub_v1";
+let li = 0, prog = {}, nm = "", ach = {}, view = {v:"home"};
+try{ const s = JSON.parse(localStorage.getItem(KEY) || "{}"); prog = s.prog || {}; nm = s.name || ""; ach = s.ach || {}; li = Math.max(0, LANGS.findIndex(l => l[0] === s.lang)); if(!s.lang){ const n = (navigator.language||"de").slice(0,2); li = Math.max(0, LANGS.findIndex(l => l[0] === n)); } }catch(e){}
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify({prog, name:nm, ach, lang:LANGS[li][0]})); }catch(e){} }
+
+/* ---------- Oberflächentexte [DE, EN, SWG] ---------- */
+const S = {
+ title:["Stadtclub-Quiz","Stadtclub Quiz","Stadtclub-Quiz"],
+ sub:["Inoffizielles Fan-Projekt","Unofficial fan project","Inoffizielles Fan-Projekt"],
+ hello:["Servus! Was weißt du über den VfR Heilbronn?","Hey! How much do you know about VfR Heilbronn?","Griaß di! Was woisch du iber da VfR Hoilbronn?"],
+ intro:["In 20 Minuten vom Bankdrücker zur Vereinslegende. Für Neulinge, Dauerkartenbesitzer und alle am Stammtisch.","In 20 minutes from benchwarmer to club legend. For newcomers, season-ticket holders and everyone at the Stammtisch.","In 20 Minuta vom Banksitzer zur Vereinslegende. Fir Neie, Dauerkarte-Bsitzer ond älle am Stammtisch."],
+ newB:["Ich bin neu im Stadion","I'm new to the stadium","I bin neu em Stadion"],
+ newS:["Dein erstes Zertifikat in 60 Sekunden","Your first certificate in 60 seconds","Dei erschts Zertifikat en 60 Sekonda"],
+ oldB:["Ich bin schon ewig Fan","I've been a fan forever","I bin scho ewig Fan"],
+ oldS:["Teste dich gleich in der Bossrunde","Take on the boss round right away","Teschd di glei en dr Bossrond"],
+ achFirst:["Erfolg freigeschaltet: Erster Treffer! Das fühlt sich an wie ein Tor in der 90. Minute.","Achievement unlocked: first hit! That feels like a goal in the 90th minute.","Erfolg freigschalte: Erschdr Treffer! Des fühlt sich a wie a Tor en dr 90. Minuta."],
+ certNow:["Dein Zertifikat ist fertig. Name eintragen, speichern, am Stammtisch zeigen!","Your certificate is ready. Add your name, save it, show it off at the Stammtisch!","Dei Zertifikat isch fertig. Noma eitraga, speichra, am Stammtisch zoiga!"],
+ nSec:["Mehr vom VfR Heilbronn","More from VfR Heilbronn","Mehr vom VfR Hoilbronn"],
+ nSite:["Offizielle Vereinsseite","Official club website","Offizielle Vereinsseite"],
+ nHist:["Vereinsgeschichte (Wikipedia, DE)","Club history (Wikipedia, DE)","Vereinsgschicht (Wikipedia, DE)"],
+ nCorp:["","",""],
+ nExt:["öffnet im gleichen Tab","opens in the same tab","got em gleicha Tab uff"],
+ nameQ:["Wie dürfen wir dich am Stammtisch nennen?","What should we call you at the Stammtisch?","Wia derfet mir di am Stammtisch nenna?"],
+ nameSub:["Für Begrüßung, Quiz und Zertifikat. Dein Name bleibt auf diesem Gerät.","For greetings, quiz and certificate. Your name stays on this device.","Fir Begrießong, Quiz ond Zertifikat. Dei Noma bleibt uff dem Gerät."],
+ nameP2:["Dein Name oder Fan-Name","Your name or fan nickname","Dei Noma oder Fan-Noma"],
+ nameOk:["Das bin ich","That's me","Des bin i"],
+ nameSkip:["Lieber anonym bleiben","Stay anonymous","Liaber anonym bleiba"],
+ nameChange:["Name ändern","Change name","Noma ändra"],
+ helloN:["Servus {n}! Was weißt du über den VfR Heilbronn?","Hey {n}! How much do you know about VfR Heilbronn?","Griaß di, {n}! Was woisch du iber da VfR Hoilbronn?"],
+ greetN:["Schön, dich am Stammtisch zu sehen, {n}. Das erste Bier gibt's nach dem Quiz.","Great to see you at the Stammtisch, {n}. The first beer comes after the quiz.","Schee, di am Stammtisch zom säh, {n}. S erschde Bier gibt's noch am Quiz."],
+ qFirst:["Anpfiff, {n}!","Kick-off, {n}!","Ahpfiff, {n}!"],
+ qLast:["Letzte Frage, {n}: Das ist der Elfmeter.","Last question, {n}: this is the penalty.","Letschde Frog, {n}: Des isch dr Elfmeter."],
+ passN:["Spiel gewonnen, {n}!","Match won, {n}!","Spiel gwonne, {n}!"],
+ tryN:["Knapp, {n}! Nochmal in die Verlängerung?","Close, {n}! Another go in extra time?","Knapp, {n}! Nomol en d Verlängerong?"],
+ gateT:["Kurze Halbzeitpause vor dem Quiz!","Quick half-time break before the quiz!","Kurze Halbzeitpaus vorm Quiz!"],
+ gateS:["Wie heißt du eigentlich? Dann wird dein Zertifikat gleich viel persönlicher. Der Name bleibt auf diesem Gerät.","What's your name? It makes your certificate much more personal. Your name stays on this device.","Wia hoißt du eigentlich? No isch dei Zertifikat glei viel persönlicher. Dr Noma bleibt uff dem Gerät."],
+ gateGo:["Los geht's","Let's go","Auf gohts"],
+ gateSkip:["Weiter ohne Namen","Continue without a name","Weiter ohne Noma"],
+ by:["von den VfR Hardcore Fans: Thomas & Nobbe","by the VfR hardcore fans: Thomas & Nobbe","vo de VfR-Hardcore-Fans: Thomas & Nobbe"],
+ introH:["In 20 Minuten vom Bankdrücker zur Vereinslegende. Für Neue, Dauerkarten-Profis und die ganze Kurve.","In 20 minutes from benchwarmer to club legend. For newcomers, season-ticket pros and the whole curve.","In 20 Minuta vom Banksitzer zur Vereinslegende. Fir Neie, Dauerkarte-Profis ond d ganz Kurv."],
+ instT:["Als App installieren","Install as an app","Als App installiera"],
+ instS:["Startet wie eine App und läuft auch ohne Internet.","Opens like an app and works without internet.","Startet wia a App ond lauft au ohne Internet."],
+ instB:["Installieren","Install","Installiera"],
+ instIos:["Auf dem iPhone: Teilen-Symbol antippen, dann „Zum Home-Bildschirm“.","On iPhone: tap the Share icon, then “Add to Home Screen”.","Uff am iPhone: Teila-Symbol antippa, no „Zom Home-Bildschirm“."],
+ updT:["Neue Version verfügbar","New version available","Neue Version do"],
+ updB:["Aktualisieren","Update","Aktualisiera"],
+ offT:["Bereit für den Offline-Betrieb ✓","Ready for offline use ✓","Bereit fir ohne Internet ✓"],
+ moreN:["Mehr vom VfR Heilbronn entdecken","Discover more about VfR Heilbronn","Mehr vom VfR Hoilbronn entdecka"],
+ contB:["Weiter geht's","Keep going","Weiter gohts"],
+ pitch:["Auch Stadtclubs haben mal klein angefangen: 1896 im Lokal „Zur Hopfenblüte“.","Even city clubs started small: in 1896 in the pub “Zur Hopfenblüte”.","Au Stadtclubs hend mol klei agfanga: 1896 em Lokal „Zur Hopfenblüte“."], lessons:["Deine Spieltage","Your matchdays","Dei Spieltag"],
+ min:["Min.","min","Min."],
+ done:["gespielt","played","gspielt"],
+ rank:["Dein Rang","Your rank","Dei Rang"],
+ coins:["Tore","goals","Tor"],
+ starsOf:["Sterne","stars","Stern"],
+ start:["Anpfiff","Kick-off","Ahpfiff"],
+ cont:["Nochmal spielen","Play again","Nomol spiela"],
+ back:["Übersicht","Overview","Übersicht"],
+ backL:["Zum Spieltag","Back to matchday","Zom Spieltag"],
+ intro2:["Kurz & knackig","Short & sweet","Kurz ond knackig"],
+ pro:["Für Kenner: Stammtisch-Wissen","For connoisseurs: Stammtisch knowledge","Fir Kenner: Stammtisch-Wissa"],
+ fun:["Halbzeit-Gag","Half-time joke","Halbzeit-Gaudi"],
+ src:["Quellen (Stand 14.10.2026)","Sources (as of 14 Oct 2026)","Quella (Stand 14.10.2026)"],
+ quiz:["Quiz starten","Start quiz","Quiz starta"],
+ qof:["Frage","Question","Frog"],
+ of:["von","of","vo"],
+ next:["Weiter","Next","Weiter"],
+ finish:["Ergebnis ansehen","See result","Ergebnis aschaua"],
+ correct:["Richtig!","Correct!","Richtig!"],
+ wrong:["Knapp daneben!","Not quite!","Knapp danaba!"],
+ solution:["Richtig wäre:","The right answer is:","Richtig wär:"],
+ res:["Ergebnis","Result","Ergebnis"],
+ pass:["Spiel gewonnen!","Match won!","Spiel gwonne!"],
+ tryAgain:["Fast! Nochmal in die Verlängerung?","Almost! Another go in extra time?","Fascht! Nomol en d Verlängerong?"],
+ retry:["Quiz wiederholen","Retry quiz","Quiz wiederhola"],
+ nextL:["Nächster Spieltag","Next matchday","Nägschdr Spieltag"],
+ over:["Zur Übersicht","To overview","Zor Übersicht"],
+ reset:["Fortschritt zurücksetzen","Reset progress","Fortschritt zrucksetza"],
+ resetQ:["Fortschritt wirklich löschen?","Really delete your progress?","Fortschritt wirklich lösche?"],
+ allDone:["Alle Spieltage gemeistert – du bist offiziell ein Stadtclub-Experte (inoffiziell).","All matchdays mastered – you are officially a city-club expert (unofficially).","Älle Spieltag gmeischtert – du bisch offiziell a Stadtclub-Experte (inoffiziell)."],
+ disc:["Inoffizielles Fan-Projekt der VfR-Hardcore-Fans Thomas & Nobbe ohne Verbindung zum VfR Heilbronn 96/18 e.V. VfR Heilbronn und alle genannten Namen und Marken gehören ihren jeweiligen Inhabern; es werden kein Vereinswappen, keine Logos und keine Originalbilder verwendet. Zahlen sind Momentaufnahmen aus den angegebenen Quellen und können sich ändern.","Unofficial fan project by the VfR hardcore fans Thomas & Nobbe, not affiliated with VfR Heilbronn 96/18 e.V. VfR Heilbronn and all names and trademarks mentioned belong to their respective owners; no club crest, logos or original images are used. Figures are snapshots from the cited sources and may change.","Inoffizielles Fan-Projekt vo de VfR-Hardcore-Fans Thomas ond Nobbe, ohne Verbindong zom VfR Hoilbronn 96/18 e.V. VfR Hoilbronn ond älle gnannda Noma ond Marka ghöret ihrer jeweilige Inhaber; s werret koi Vereinswappa, koine Logos ond koine Originalbilder verwendet. Zahla send Momentaufnahma aus de Quella ond kennet sich ändra."],
+ trans:["Hinweis: Die schwäbischen Texte sind liebevoll-lautmalerisch gemeint und keine Rechtschreibnorm; Dialekt-Profis dürfen gern korrigieren.","Note: the Swabian texts are meant playfully and phonetically, not as a spelling standard; dialect pros are welcome to correct them.","Hinweis: D schwäbische Text send liabevoll gmoint, koi Rechtschreibnorm; Dialekt-Profis derfet gärn korrigiera."],
+ skip:["Zum Inhalt","Skip to content","Zom Inhalt"],
+ ver:["Version","Version","Version"],
+ themeL:["Farbschema wechseln","Switch colour scheme","Farbschema wechsla"],
+ certBtn:["Zertifikat holen","Get your certificate","Zertifikat hola"],
+ certs:["Deine Zertifikate","Your certificates","Dei Zertifikat"],
+ certsHint:["Jedes gewonnene Spiel gibt eine Urkunde fürs Stammtisch-Regal. Alle sieben gibt das Meister-Zertifikat.","Every match won earns a certificate for the Stammtisch shelf. All seven earn the Master certificate.","Jeds gwonnene Spiel gibt a Urkond fers Stammtisch-Regal. Älle siebe gend s Meischter-Zertifikat."],
+ master:["Meister-Zertifikat","Master certificate","Meischter-Zertifikat"],
+ nameL:["Dein Name für die Urkunde","Your name for the certificate","Dei Noma fir d Urkond"],
+ nameP:["Dein Name hier – sei stolz darauf!","Your name here – be proud of it!","Dei Noma do – sei stolz drauf!"],
+ dl:["Als Bild speichern (PNG)","Save as image (PNG)","Als Bild speichra (PNG)"],
+ prt:["Drucken","Print","Drucka"],
+ certOf:["Zertifikat","Certificate","Zertifikat"],
+ certMasterBadge:["Alle 7 Spieltage gewonnen!","All 7 matchdays won!","Älle 7 Spieltag gwonne!"],
+ spruchT:["Stammtisch-Spruch & Fakt","Stammtisch saying & fact","Stammtisch-Spruch ond Fakt"],
+ spruchB:["Noch einer!","Another one!","Nomol oiner!"],
+ spruchG:["😄 Stammtisch-Spruch","😄 Stammtisch saying","😄 Stammtisch-Spruch"],
+ spruchF:["🧠 Wusstest du?","🧠 Did you know?","🧠 Hosch gwisst?"]
+};
+const RANKS = [
+ [0,["Bankdrücker","Benchwarmer","Banksitzer"]],
+ [3,["Stammspieler","Regular starter","Stammspieler"]],
+ [8,["Torjäger","Top scorer","Torjäger"]],
+ [14,["Kapitän","Captain","Kapitän"]],
+ [20,["Vereinslegende","Club legend","Vereinslegende"]]
+];
+const OKS = [
+ ["Tooor! Und der Stammtisch jubelt.","Goal! And the Stammtisch erupts.","Tooor! Ond dr Stammtisch jubelt."],
+ ["Richtig! Das hätte selbst der Schiri gesehen.","Right! Even the referee would have spotted that.","Richtig! Des het sogar dr Schiri gsäh."],
+ ["Volltreffer! Thomas nickt anerkennend.","Bullseye! Thomas nods in approval.","Volltreffer! Dr Thomas nickt anerkennend."],
+ ["Sauber! Ond des ohne Eintritt zahla.","Clean! And without paying admission.","Sauber! Ond des ohne Eigtritt zahla."]
+];
+const BADS = [
+ ["Autsch! Gelbe Karte für diese Antwort.","Ouch! Yellow card for that answer.","Autsch! Gelbe Karta fir de Antwort."],
+ ["Nicht schlimm: Nachspielzeit gibt's gratis.","No worries: stoppage time is free.","Net schlimm: Nachspielzeit gibt's gratis."],
+ ["Knapp vorbei ist auch Lattenkracher.","A near miss is still a crossbar rattler.","Knapp vorbei isch au a Lattakracher."],
+ ["Das war die Schiedsrichter-Falle. Nächstes Mal klappt's.","That was the referee trap. You'll get it next time.","Des war d Schiedsrichter-Falla. S nägscht Mol klappt's."]
+];
+const OKN = [
+ ["Tooor, {n}! Und der Stammtisch jubelt.","Goal, {n}! And the Stammtisch erupts.","Tooor, {n}! Ond dr Stammtisch jubelt."],
+ ["Richtig, {n}! Das hätte selbst der Schiri gesehen.","Right, {n}! Even the referee would have spotted that.","Richtig, {n}! Des het sogar dr Schiri gsäh."],
+ ["Volltreffer, {n}! Nobbe klatscht Beifall.","Bullseye, {n}! Nobbe applauds.","Volltreffer, {n}! Dr Nobbe klatscht Beifall."],
+ ["Sauber, {n}! Ond des ohne Eintritt zahla.","Clean, {n}! And without paying admission.","Sauber, {n}! Ond des ohne Eigtritt zahla."]
+];
+const BADN = [
+ ["Autsch, {n}! Gelbe Karte für diese Antwort.","Ouch, {n}! Yellow card for that answer.","Autsch, {n}! Gelbe Karta fir de Antwort."],
+ ["Nicht schlimm, {n}: Nachspielzeit gibt's gratis.","No worries, {n}: stoppage time is free.","Net schlimm, {n}: Nachspielzeit gibt's gratis."],
+ ["Knapp daneben, {n}. Selbst Thomas hat mal die Latte getroffen.","A near miss, {n}. Even Thomas has hit the crossbar once.","Knapp danaba, {n}. Sogar dr Thomas hot mol d Latta troffa."],
+ ["Das war die Schiedsrichter-Falle, {n}. Nächstes Mal klappt's.","That was the referee trap, {n}. You'll get it next time.","Des war d Schiedsrichter-Falla, {n}. S nägscht Mol klappt's."]
+];
+const LOGO = ["................","..KKKKK..KKKKK..",".KKWKWKKKWKWKWK.","KWKWKWKWKWKWKWKK","KKKWKWKWKWKWKWKK","..KWKWKWKWKWKK..","...KKWKWKRRWK...","...KKWKWKRRWK...","...KKWKWKWKWK...","...KKKKKKKKKK...","................"], LOGOC = {K:"#0d0d0d", R:"#c62d33", W:"#ffffff", Y:"#ffc800", B:"#2a4bd7", G:"#1b7a3d"};
+const logoRects = () => LOGO.map((r, y) => [...r].map((c, x) => c === "." ? "" : '<rect x="' + x + '" y="' + y + '" width="1" height="1" fill="' + LOGOC[c] + '"/>').join("")).join("");
+const logoSvg = () => '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 11" shape-rendering="crispEdges" aria-hidden="true" focusable="false">' + logoRects() + '</svg>';
+const t = k => S[k][li];
+const fname = () => { const f = (nm || "").trim().split(/\s+/)[0] || ""; let w = 0, o = ""; for(const c of f){ w += /[\u3000-\u9fff\uff00-\uffef]/.test(c) ? 2 : 1; if(w > 16) break; o += c; } return o; };
+const fill = s => s.replace(/\{n\}/g, fname());
+const hasName = () => fname() !== "";
+let editName = false;
+const NURL = [["https://www.vfr1896.de/","vfr1896.de"],["https://www.vfr1896.de/","vfr1896.de"],["https://www.vfr1896.de/","vfr1896.de"]];
+
+
+/* ---------- Spieltage (Lektionen) [DE, EN, SWG] ---------- */
+const WP = "https://en.wikipedia.org/wiki/";
+const WPDE = "https://de.wikipedia.org/wiki/VfR_Heilbronn";
+const SITE = "https://www.vfr1896.de/";
+const LESSONS = [
+{ id:"gruendung", ico:"⚽", c:"var(--red)", min:1,
+ t:["Blitzstart: 1896 in 60 Sekunden","Quick start: 1896 in 60 seconds","Blitzstart: 1896 en 60 Sekonda"],
+ sub:["Zwei Karten, zwei Fragen, ein Zertifikat","Two cards, two questions, one certificate","Zwoi Kärtla, zwoi Froga, a Zertifikat"],
+ cards:[
+  [["Ein Lokal namens Hopfenblüte","A pub called Hopfenblüte","A Lokal mit Noma Hopfenblüte"],
+   ["1896 wurde der Verein als „Heilbronner Fussballklub“ im Lokal „Zur Hopfenblüte“ gegründet. Der Name klingt nach Brauerei-Werbung, war aber der erste Stammtisch der Vereinsgeschichte.","In 1896 the club was founded as “Heilbronner Fussballklub” in the pub “Zur Hopfenblüte”. The name sounds like a brewery ad, but it was the first Stammtisch in club history.","1896 isch dr Verein als „Heilbronner Fussballklub“ em Lokal „Zur Hopfenblüte“ gründet worda. Dr Noma klingt noch Brauerei-Werbong, war aber dr erschde Stammtisch vo dr Vereinsgschicht."]],
+  [["Schwarz-Weiß und viele Namen","Black and white and many names","Schwarz-Weiß ond viele Noma"],
+   ["1913 folgte die Fusion mit dem Fußballverein Adler, 1920 der Name „Verein für Rasenspiele 1896“. Die Vereinsfarben sind Schwarz-Weiß, das passt zu jedem Stammtisch-Tischtuch.","In 1913 came the merger with Fußballverein Adler, in 1920 the name “Verein für Rasenspiele 1896”. The club colours are black and white, which goes with every Stammtisch tablecloth.","1913 kam d Fusion mit am Fussballverein Adler, 1920 dr Noma „Verein für Rasenspiele 1896“. D Vereinsfarba send Schwarz-Weiß, des passt zu jedem Stammtisch-Dischduach."]]
+ ],
+ pro:["Heute heißt der Verein „VfR Heilbronn 96/18 e.V.“ und nennt sich auf der Vereinsseite „#derStadtclub“.","Today the club is called “VfR Heilbronn 96/18 e.V.” and calls itself “#derStadtclub” on its website.","Heit hoißt dr Verein „VfR Hoilbronn 96/18 e.V.“ ond nennt sich uff dr Vereinsseite „#derStadtclub“."],
+ fun:["Bei dem Gründungslokal wundert es niemanden, dass der Stammtisch älter ist als die Tabelle.","With a founding pub like that it is no surprise that the Stammtisch is older than the league table.","Bei dem Gründongslokal wondrets koin, dass dr Stammtisch älter isch als d Tabell."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE],["Offizielle Vereinsseite",SITE]],
+ q:[
+  {q:["In welchem Jahr wurde der VfR Heilbronn gegründet?","In which year was VfR Heilbronn founded?","En welchem Johr isch dr VfR Hoilbronn gründet worda?"],
+   a:[["1896","1896","1896"],["1900","1900","1900"],["1913","1913","1913"],["Irgendwann nach der dritten Halben","Sometime after the third half-litre","Irgendwann noch dr dritte Halbe"]],
+   e:["1896, als „Heilbronner Fussballklub“.","1896, as “Heilbronner Fussballklub”.","1896, als „Heilbronner Fussballklub“."]},
+  {q:["In welchem Lokal wurde der Verein gegründet?","In which pub was the club founded?","En welchem Lokal isch dr Verein gründet worda?"],
+   a:[["„Zur Hopfenblüte“","“Zur Hopfenblüte”","„Zur Hopfenblüte“"],["„Zum goldenen Ochsen“","“Zum goldenen Ochsen”","„Zom goldene Ochsa“"],["„Zur Schwäbischen Sparkasse“","“Zur Schwäbischen Sparkasse”","„Zor Schwäbische Sparkass“"],["Im Frankenstadion","In the Frankenstadion","Em Frankestadion"]],
+   e:["Das Lokal „Zur Hopfenblüte“ in Heilbronn.","The pub “Zur Hopfenblüte” in Heilbronn.","S Lokal „Zur Hopfenblüte“ en Hoilbronn."]}
+ ]},
+{ id:"zweitliga", ico:"📈", c:"var(--blue)", min:2,
+ t:["Die große Zeit: Zweite Liga","The big era: second tier","D große Zeit: Zwoite Liga"],
+ sub:["Von 1956 bis 1975, mit vollem Stadion","From 1956 to 1975, with a full stadium","Vo 1956 bis 1975, mit vollem Stadion"],
+ cards:[
+  [["Aufstieg 1956","Promotion in 1956","Ufstieg 1956"],
+   ["1956 wurde der VfR Württembergischer Meister (1. Amateurliga) und stieg in die Zweite Liga Süd auf. Die Saison 1956/57 endete auf Platz 18.","In 1956 VfR became Württemberg champion (1. Amateurliga) and was promoted to the Zweite Liga Süd. The 1956/57 season ended in 18th place.","1956 isch dr VfR Württembergischer Meischter (1. Amateurliga) worda ond en d Zwoite Liga Süd uffgschtiega. D Saison 1956/57 hot uff Platz 18 ghört."]],
+  [["Regionalliga und volles Haus","Regionalliga and a full house","Regionalliga ond volles Haus"],
+   ["Von 1969/70 bis 1973/74 spielte der VfR in der Regionalliga Süd, 1974/75 in der 2. Bundesliga Süd (Platz 17). Die Saison 1969/70 gilt als die erfolgreichste der Vereinsgeschichte, mit rund 10.000 Zuschauern im Schnitt.","From 1969/70 to 1973/74 VfR played in the Regionalliga Süd, in 1974/75 in the 2. Bundesliga Süd (17th place). The 1969/70 season counts as the most successful in club history, with about 10,000 spectators on average.","Vo 1969/70 bis 1973/74 hot dr VfR en dr Regionalliga Süd gspielt, 1974/75 en dr 2. Bundesliga Süd (Platz 17). D Saison 1969/70 gilt als d erfolgreichschde vo dr Vereinsgschicht, mit rond 10.000 Zuschauer em Schnitt."]]
+ ],
+ pro:["Wikipedia zählt acht Zweitliga-Spielzeiten, nennt die Regionalliga Süd aber ausdrücklich als damals zweithöchste Klasse. Die Zählung ist nicht ganz einheitlich.","Wikipedia counts eight second-tier seasons but names the Regionalliga Süd explicitly as the second-highest level at the time. The counting is not entirely consistent.","Wikipedia zählt acht Zwoitliga-Spielzeita, nennt d Regionalliga Süd aber ausdrücklich als damals zwoithöchschde Klass. D Zählong isch it ganz oihoitlich."],
+ fun:["Zehntausend Zuschauer: Da wurde das Bier am Stammtisch noch in der Schlange bestellt, nicht per App.","Ten thousand spectators: back then you queued for a beer, no app needed.","Zehntausend Zuschauer: Do hot ma s Bier no en dr Schlang bstellt, net per App."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE]],
+ q:[
+  {q:["Welcher Titel führte 1956 in die Zweite Liga Süd?","Which title led to the Zweite Liga Süd in 1956?","Welcher Titel hot 1956 en d Zwoite Liga Süd gführt?"],
+   a:[["Württembergischer Meister","Württemberg champion","Württembergischer Meischter"],["Deutscher Meister","German champion","Deutscher Meischter"],["DFB-Pokalsieger","DFB-Pokal winner","DFB-Pokalsieger"],["Meister der Kreisliga B","Kreisliga B champion","Meischter vo dr Kreisliga B"]],
+   e:["1956 Württembergischer Meister, danach Aufstieg.","Württemberg champion in 1956, then promotion.","1956 Württembergischer Meischter, no Ufstieg."]},
+  {q:["Wie viele Zuschauer kamen 1969/70 im Schnitt?","How many spectators came on average in 1969/70?","Wia viel Zuschauer sen 1969/70 em Schnitt kumma?"],
+   a:[["Rund 10.000","About 10,000","Rond 10.000"],["Rund 1.000","About 1,000","Rond 1.000"],["Rund 50.000","About 50,000","Rond 50.000"],["Rund 100","About 100","Rond 100"]],
+   e:["Rund 10.000 im Schnitt, die erfolgreichste Saison.","About 10,000 on average, the most successful season.","Rond 10.000 em Schnitt, d erfolgreichschde Saison."]}
+ ]},
+{ id:"pokal", ico:"🏆", c:"var(--green)", min:3,
+ t:["Pokalnacht 1970: Offenbach muss zittern","Cup night 1970: Offenbach trembles","Pokalnacht 1970: Offeba mueß zittra"],
+ sub:["Ein 2:0 gegen Kickers Offenbach","A 2–0 against Kickers Offenbach","A 2:0 gega Kickers Offeba"],
+ cards:[
+  [["Der Pokalsieg","The cup win","Dr Pokalsieg"],
+   ["Am 12. Dezember 1970 schlug der VfR im DFB-Pokal 1970/71 Kickers Offenbach mit 2:0. Laut Wikipedia kamen rund 15.000 Zuschauer.","On 12 December 1970 VfR beat Kickers Offenbach 2–0 in the DFB-Pokal 1970/71. According to Wikipedia about 15,000 spectators came.","Am 12. Dezember 1970 hot dr VfR em DFB-Pokal 1970/71 Kickers Offeba mit 2:0 gschlaga. Noch Wikipedia sen rond 15.000 Zuschauer kumma."]],
+  [["Dann kam Schalke","Then came Schalke","No isch Schalke kumma"],
+   ["Im Achtelfinale war Schluss: 0:4 gegen Schalke 04. Gegen so einen Gegner ist ein Achtelfinale schon ein Achtungserfolg.","The run ended in the round of 16: 0–4 against Schalke 04. Against an opponent like that a last-16 place is already a respectable result.","Em Achtelfinale war Schluss: 0:4 gega Schalke 04. Gega so en Gegner isch s Achtelfinale scho a Achtongserfolg."]],
+  [["Zahlen zum Merken","Numbers to remember","Zahla zom Merka"],
+   ["12.12.1970, 2:0, ca. 15.000 Zuschauer, Achtelfinale 0:4. Wer das am Stammtisch vorbeten kann, bekommt eine Halbe.","12.12.1970, 2–0, approx. 15,000 spectators, last 16: 0–4. Whoever can recite that at the Stammtisch gets a beer.","12.12.1970, 2:0, ca. 15.000 Zuschauer, Achtelfinale 0:4. Wer des am Stammtisch hersaga ka, griagt a Halbe."]]
+ ],
+ pro:["Der Begriff „Stammtisch-Wissen“ stammt von uns; die Zahlen stehen so in der Wikipedia (Stand Oktober 2026).","The term “Stammtisch knowledge” is ours; the figures are as given in Wikipedia (as of October 2026).","Dr Begriff „Stammtisch-Wissa“ isch vo ons; d Zahla stond so en dr Wikipedia (Stand Oktober 2026)."],
+ fun:["Offenbach hat bis heute nur eine Frage: „Wie hieß der Schiedsrichter?“","Offenbach has had only one question ever since: “What was the referee's name?”","Offeba hot bis heit bloß oi Frog: „Wia hoißt dr Schiedsrichter?“"],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE]],
+ q:[
+  {q:["Wen schlug der VfR am 12. Dezember 1970 im DFB-Pokal mit 2:0?","Whom did VfR beat 2–0 in the DFB-Pokal on 12 December 1970?","Wa hot dr VfR am 12. Dezember 1970 em DFB-Pokal mit 2:0 gschlaga?"],
+   a:[["Kickers Offenbach","Kickers Offenbach","Kickers Offeba"],["Schalke 04","Schalke 04","Schalke 04"],["VfB Stuttgart","VfB Stuttgart","VfB Stuttgart"],["Die TSG aus dem Nachbarort","The TSG from the neighbouring village","D TSG us em Nochberort"]],
+   e:["Kickers Offenbach, 2:0.","Kickers Offenbach, 2–0.","Kickers Offeba, 2:0."]},
+  {q:["Wie viele Zuschauer sahen das Spiel laut Wikipedia etwa?","About how many spectators saw the match according to Wikipedia?","Wia viel Zuschauer hent s Spiel noch Wikipedia etwa gsäh?"],
+   a:[["Rund 15.000","About 15,000","Rond 15.000"],["Rund 1.500","About 1,500","Rond 1.500"],["Rund 150.000","About 150,000","Rond 150.000"],["Rund 150","About 150","Rond 150"]],
+   e:["Rund 15.000.","About 15,000.","Rond 15.000."]},
+  {q:["Gegen wen schied der VfR 1970/71 im Achtelfinale mit 0:4 aus?","Whom did VfR lose 0–4 to in the round of 16 in 1970/71?","Gega wa isch dr VfR 1970/71 em Achtelfinale mit 0:4 usgschieda?"],
+   a:[["Schalke 04","Schalke 04","Schalke 04"],["Bayern München","Bayern München","Bayern Minche"],["Kickers Offenbach","Kickers Offenbach","Kickers Offeba"],["Borussia Mönchengladbach","Borussia Mönchengladbach","Borussia Mönchengladbach"]],
+   e:["0:4 gegen Schalke 04.","0–4 against Schalke 04.","0:4 gega Schalke 04."]},
+  {q:["In welcher Saison fand dieser Pokalerfolg statt?","In which season did this cup success take place?","En welcher Saison hot dr Pokalerfolg stattgfonda?"],
+   a:[["1970/71","1970/71","1970/71"],["1956/57","1956/57","1956/57"],["1995/96","1995/96","1995/96"],["2018/19","2018/19","2018/19"]],
+   e:["DFB-Pokal 1970/71.","DFB-Pokal 1970/71.","DFB-Pokal 1970/71."]}
+ ]},
+{ id:"nachwuchs", ico:"🌱", c:"var(--purple)", min:3,
+ t:["Talentschmiede: Jugend-Pokal 1996","Talent factory: youth cup 1996","Talentschmiede: Jugend-Pokal 1996"],
+ sub:["Ein 6:1 vor 8.000 Zuschauern","A 6–1 in front of 8,000","A 6:1 vor 8.000 Zuschauer"],
+ cards:[
+  [["Der größte Erfolg","The biggest success","Dr größte Erfolg"],
+   ["1996 gewannen die A-Junioren den DFB-Jugend-Kicker-Pokal mit 6:1 gegen die Lausitzer, vor 8.000 Zuschauern. Wikipedia nennt das den größten Erfolg der Vereinsgeschichte. Trainer war Otto Frey.","In 1996 the under-19s won the DFB-Jugend-Kicker-Pokal 6–1 against Lausitzer, in front of 8,000 spectators. Wikipedia calls it the biggest success in club history. The coach was Otto Frey.","1996 hent d A-Junioren da DFB-Jugend-Kicker-Pokal mit 6:1 gega d Lausitzer gwonne, vor 8.000 Zuschauer. Wikipedia nennt des da größte Erfolg vo dr Vereinsgschicht. Trainer war dr Otto Frey."]],
+  [["Talentschmiede damals und heute","Talent factory then and now","Talentschmiede domols ond heit"],
+   ["Im selben Jahr stieg der Verein in die neu gegründete Regionalliga auf. Heute heißt ein Menüpunkt der Vereinsseite „Talentschmiede“, und seit 2020/21 kooperiert der Jugendbereich mit dem VfB Stuttgart.","In the same year the club was promoted to the newly founded Regionalliga. Today one menu item of the club website is called “Talentschmiede”, and since 2020/21 the youth section has cooperated with VfB Stuttgart.","Em selbe Johr isch dr Verein en d neu gründet Regionalliga uffgschtiega. Heit hoißt a Menüpunkt vo dr Vereinsseite „Talentschmiede“, ond seit 2020/21 arbeitet dr Jugendbereich mit am VfB Stuttgart zamma."]]
+ ],
+ pro:["Der Pokal heißt vollständig „DFB-Jugend-Kicker-Pokal“. Zahlen laut Wikipedia, Stand Oktober 2026.","The cup's full name is “DFB-Jugend-Kicker-Pokal”. Figures according to Wikipedia, as of October 2026.","Dr Pokal hoißt ganz „DFB-Jugend-Kicker-Pokal“. Zahla noch Wikipedia, Stand Oktober 2026."],
+ fun:["Aus dem Jugendpokal lernen wir: Wer früh anfängt, braucht später weniger Ausreden.","The youth cup teaches us: if you start early, you need fewer excuses later.","Aus em Jugendpokal lerned mir: Wer fruah afängt, braucht spädr weniger Usreda."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE],["Offizielle Vereinsseite",SITE]],
+ q:[
+  {q:["Welchen Pokal gewannen die A-Junioren 1996?","Which cup did the under-19s win in 1996?","Welcha Pokal hent d A-Junioren 1996 gwonne?"],
+   a:[["Den DFB-Jugend-Kicker-Pokal","The DFB-Jugend-Kicker-Pokal","Da DFB-Jugend-Kicker-Pokal"],["Den Wasen-Pokal","The Wasen Cup","Da Wasa-Pokal"],["Den Landesmeister-Pokal der Kreisliga","The Kreisliga champions' cup","Da Landesmeischter-Pokal vo dr Kreisliga"],["Den Weißbier-Pokal","The weissbier cup","Da Weißbier-Pokal"]],
+   e:["DFB-Jugend-Kicker-Pokal 1996.","DFB-Jugend-Kicker-Pokal 1996.","DFB-Jugend-Kicker-Pokal 1996."]},
+  {q:["Mit welchem Ergebnis gewann der VfR das Endspiel 1996?","What was the score when VfR won the 1996 final?","Mit welchem Ergebnis hot dr VfR s Endspiel 1996 gwonne?"],
+   a:[["6:1","6–1","6:1"],["2:1","2–1","2:1"],["1:0","1–0","1:0"],["10:0","10–0","10:0"]],
+   e:["6:1 gegen die Lausitzer.","6–1 against Lausitzer.","6:1 gega d Lausitzer."]},
+  {q:["Vor wie vielen Zuschauern fand das Endspiel statt?","In front of how many spectators was the final played?","Vor wia viel Zuschauer isch s Endspiel gwea?"],
+   a:[["Vor 8.000","In front of 8,000","Vor 8.000"],["Vor 800","In front of 800","Vor 800"],["Vor 80.000","In front of 80,000","Vor 80.000"],["Vor 80","In front of 80","Vor 80"]],
+   e:["8.000 Zuschauer.","8,000 spectators.","8.000 Zuschauer."]},
+  {q:["Mit welchem Verein kooperiert der Jugendbereich seit 2020/21?","With which club has the youth section cooperated since 2020/21?","Mit welchem Verein arbeitet dr Jugendbereich seit 2020/21 zamma?"],
+   a:[["Mit dem VfB Stuttgart","With VfB Stuttgart","Mit am VfB Stuttgart"],["Mit dem FC Bayern","With FC Bayern","Mit am FC Bayern"],["Mit dem Gesangverein Eintracht","With the Eintracht choir","Mit am Gsangverein Eintracht"],["Mit keinem, die schaffen allein","With nobody, they manage alone","Mit koim, de schaffet alloi"]],
+   e:["Kooperation mit dem VfB Stuttgart.","Cooperation with VfB Stuttgart.","Kooperation mit am VfB Stuttgart."]}
+ ]},
+{ id:"koepfe", ico:"🧢", c:"var(--blue)", min:3,
+ t:["Köpfe: Rangnick, Čajkovski & Co.","Faces: Rangnick, Čajkovski & Co.","Köpf: Rangnick, Čajkovski ond Co."],
+ sub:["Spieler, Trainer und Vorsitzende","Players, coaches and chairmen","Spieler, Trainer ond Vorsitzende"],
+ cards:[
+  [["Ein Name, den jeder kennt","A name everyone knows","A Noma, dean jeder kennt"],
+   ["Ralf Rangnick spielte von 1980 bis 1982 beim VfR Heilbronn, lange bevor er als Trainer bekannt wurde. Spieler sein und Trainer werden: Der Stammtisch hat es immer vorher gewusst.","Ralf Rangnick played for VfR Heilbronn from 1980 to 1982, long before he became known as a coach. Being a player and becoming a coach: the Stammtisch always knew it beforehand.","Dr Ralf Rangnick hot vo 1980 bis 1982 beim VfR Hoilbronn gspielt, lang bevor r als Trainer bekannt worda isch. Spieler sei ond Trainer wera: Dr Stammtisch hot's immer vorher gwisst."]],
+  [["Trainerwechsel 1974","Coaching change in 1974","Trainerwechsel 1974"],
+   ["In der Saison 1974/75 trainierte Željko Čajkovski den VfR bis zum 7. November 1974, danach übernahm Rudi Faßnacht. Der VfR beendete die Saison auf Platz 17.","In the 1974/75 season Željko Čajkovski coached VfR until 7 November 1974, then Rudi Faßnacht took over. VfR finished the season in 17th place.","In dr Saison 1974/75 hot dr Željko Čajkovski da VfR bis zom 7. November 1974 trainiert, no hot dr Rudi Faßnacht übernomma. Dr VfR hot d Saison uff Platz 17 beendet."]],
+  [["Der Vorsitzende der Neugründung","The chairman of the new founding","Dr Vorsitzende vo dr Neugründong"],
+   ["Bei der Neugründung am 16. Mai 2018 war Onur Celik Vorsitzender, laut Wikipedia. Mehr Vorstands-Namen findest du auf der Vereinsseite.","At the new founding on 16 May 2018 Onur Celik was chairman, according to Wikipedia. More board names can be found on the club website.","Bei dr Neugründong am 16. Mai 2018 war dr Onur Celik Vorsitzender, noch Wikipedia. Mehr Vorstands-Noma gibt's uff dr Vereinsseite."]]
+ ],
+ pro:["Wikipedia nennt weitere Spieler und Trainer, darunter Bernd Hoffmann, Reinhold Fanz, Onur Celik und Rüdiger Rehm. Die Liste ist eine Auswahl.","Wikipedia lists more players and coaches, including Bernd Hoffmann, Reinhold Fanz, Onur Celik and Rüdiger Rehm. The list is a selection.","Wikipedia nennt weitere Spieler ond Trainer, drunter dr Bernd Hoffmann, dr Reinhold Fanz, dr Onur Celik ond dr Rüdiger Rehm. D Lischt isch a Auswahl."],
+ fun:["Wer hier mal gespielt hat, kann am Stammtisch alles erzählen, und es klingt immer nach Pokalfinale.","Whoever once played here can tell anything at the Stammtisch and it always sounds like a cup final.","Wer do mol gspielt hot, ka am Stammtisch älles verzähla, ond s klingt immer noch Pokalfinale."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE]],
+ q:[
+  {q:["Wer spielte von 1980 bis 1982 beim VfR Heilbronn und wurde später als Trainer bekannt?","Who played for VfR Heilbronn from 1980 to 1982 and later became known as a coach?","Wer hot vo 1980 bis 1982 beim VfR Hoilbronn gspielt ond isch spädr als Trainer bekannt worda?"],
+   a:[["Ralf Rangnick","Ralf Rangnick","Ralf Rangnick"],["Jürgen Klopp","Jürgen Klopp","Jürgen Klopp"],["Joachim Löw","Joachim Löw","Joachim Löw"],["Der Wirt vom Stammtisch","The landlord of the Stammtisch","Dr Wirt vom Stammtisch"]],
+   e:["Ralf Rangnick, 1980 bis 1982.","Ralf Rangnick, 1980 to 1982.","Ralf Rangnick, 1980 bis 1982."]},
+  {q:["Welcher Trainer war 1974/75 bis zum 7. November beim VfR?","Which coach was at VfR until 7 November in 1974/75?","Welcher Trainer war 1974/75 bis zom 7. November beim VfR?"],
+   a:[["Željko Čajkovski","Željko Čajkovski","Željko Čajkovski"],["Rudi Faßnacht","Rudi Faßnacht","Rudi Faßnacht"],["Otto Frey","Otto Frey","Otto Frey"],["Ion Dumitru","Ion Dumitru","Ion Dumitru"]],
+   e:["Čajkovski bis zum 7. November 1974.","Čajkovski until 7 November 1974.","Čajkovski bis zom 7. November 1974."]},
+  {q:["Wer übernahm danach?","Who took over afterwards?","Wer hot no übernomma?"],
+   a:[["Rudi Faßnacht","Rudi Faßnacht","Rudi Faßnacht"],["Ralf Rangnick","Ralf Rangnick","Ralf Rangnick"],["Otto Frey","Otto Frey","Otto Frey"],["Onur Celik","Onur Celik","Onur Celik"]],
+   e:["Rudi Faßnacht.","Rudi Faßnacht.","Rudi Faßnacht."]},
+  {q:["Wer war laut Wikipedia Vorsitzender bei der Neugründung 2018?","Who was chairman at the new founding in 2018 according to Wikipedia?","Wer war noch Wikipedia Vorsitzende bei dr Neugründong 2018?"],
+   a:[["Onur Celik","Onur Celik","Onur Celik"],["Ralf Rangnick","Ralf Rangnick","Ralf Rangnick"],["Rudi Faßnacht","Rudi Faßnacht","Rudi Faßnacht"],["Thomas","Thomas","Thomas"]],
+   e:["Onur Celik, Vorsitzender 2018.","Onur Celik, chairman in 2018.","Onur Celik, Vorsitzende 2018."]}
+ ]},
+{ id:"neustart", ico:"🔄", c:"var(--red)", min:3,
+ t:["Neustart 2018: Von der Kreisliga B bis zur Verbandsliga","New start 2018: from Kreisliga B to Verbandsliga","Neustart 2018: Vo dr Kreisliga B bis zor Verbandsliga"],
+ sub:["Vier Aufstiege, ein Frankenstadion","Four promotions, one Frankenstadion","Vier Ufstieg, a Frankestadion"],
+ cards:[
+  [["Neugründung","New founding","Neugründong"],
+   ["Am 16. Mai 2018 wurde der „VfR Heilbronn 96-18“ gegründet. Nach Insolvenz und Fusionen der Jahre 2002 bis 2012 war das der Neustart des Stadtclubs.","On 16 May 2018 “VfR Heilbronn 96-18” was founded. After insolvency and mergers between 2002 and 2012 this was the restart of the city club.","Am 16. Mai 2018 isch dr „VfR Hoilbronn 96-18“ gründet worda. Noch Insolvenz ond Fusiona vo 2002 bis 2012 war des dr Neustart vom Stadtclub."]],
+  [["Vier Aufstiege","Four promotions","Vier Ufstieg"],
+   ["Der Neustart begann in der Kreisliga B. Vier Aufstiege später spielte der VfR in der Saison 2024/25 in der Verbandsliga Württemberg, Platz 9. Das Frankenstadion ist seit 2018/19 die Heimstätte.","The restart began in the Kreisliga B. Four promotions later VfR played in the Verbandsliga Württemberg in 2024/25, finishing 9th. The Frankenstadion has been home since 2018/19.","Dr Neustart hot en dr Kreisliga B agfanga. Vier Ufstieg spädr hot dr VfR en dr Saison 2024/25 en dr Verbandsliga Württemberg gspielt, Platz 9. S Frankestadion isch seit 2018/19 d Heimstätt."]],
+  [["Auf und Ab","Ups and downs","Uf ond Ab"],
+   ["2025/26 wurde es Platz 17, laut Wikipedia (Stand Oktober 2026) mit Abstieg in die Landesliga. Wer mitfiebert, weiß: Im Stadtclub steckt mehr Herz als in jeder Tabelle.","In 2025/26 it was 17th place, according to Wikipedia (as of October 2026) with relegation to the Landesliga. Anyone who follows along knows: there is more heart in a city club than in any table.","2025/26 isch s Platz 17 worda, noch Wikipedia (Stand Oktober 2026) mit Abstieg en d Landesliga. Wer mitfiebert, woiß: Em Stadtclub steckt mehr Herz als en jeder Tabell."]]
+ ],
+ pro:["Die Bedeutung von „96-18“ erklärt Wikipedia nicht. Stammtisch-Vermutung: 1896 und 2018, ohne Gewähr. Der Verein heißt heute „VfR Heilbronn 96/18 e.V.“.","Wikipedia does not explain the meaning of “96-18”. Stammtisch guess: 1896 and 2018, no guarantee. Today the club is called “VfR Heilbronn 96/18 e.V.”.","D Bedeitong vo „96-18“ erklärt Wikipedia it. Stammtisch-Vermuatong: 1896 ond 2018, ohne Gwähr. Dr Verein hoißt heit „VfR Hoilbronn 96/18 e.V.“."],
+ fun:["Auf dem Weg von der Kreisliga B nach oben hat Nobbe jede Auswärtsfahrt mitgemacht, ohne einmal den Bus zu verpassen. Ein Wunder.","On the way up from Kreisliga B Nobbe joined every away trip without missing the bus once. A miracle.","Uff em Weg vo dr Kreisliga B nuff hot dr Nobbe jede Auswärtsfahrt mitgmacht, ohne amol da Bus zom verpasse. A Wonder."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE],["Offizielle Vereinsseite",SITE]],
+ q:[
+  {q:["Wann wurde der „VfR Heilbronn 96-18“ gegründet?","When was “VfR Heilbronn 96-18” founded?","Wann isch dr „VfR Hoilbronn 96-18“ gründet worda?"],
+   a:[["Am 16. Mai 2018","On 16 May 2018","Am 16. Mai 2018"],["Am 1. April 2003","On 1 April 2003","Am 1. April 2003"],["Am 27. Februar 1900","On 27 February 1900","Am 27. Februar 1900"],["Am 3. Oktober 2026","On 3 October 2026","Am 3. Oktober 2026"]],
+   e:["Am 16. Mai 2018.","On 16 May 2018.","Am 16. Mai 2018."]},
+  {q:["In welcher Liga begann der Neustart?","In which league did the restart begin?","En welcher Liga hot dr Neustart agfanga?"],
+   a:[["Kreisliga B","Kreisliga B","Kreisliga B"],["Bundesliga","Bundesliga","Bundesliga"],["Regionalliga Südwest","Regionalliga Südwest","Regionalliga Südwest"],["Champions League","Champions League","Champions League"]],
+   e:["Der Neustart begann in der Kreisliga B.","The restart began in the Kreisliga B.","Dr Neustart hot en dr Kreisliga B agfanga."]},
+  {q:["Wie viele Aufstiege brachten den VfR bis zur Verbandsliga Württemberg (Saison 2024/25)?","How many promotions took VfR up to the Verbandsliga Württemberg (season 2024/25)?","Wia viel Ufstieg hent da VfR bis zor Verbandsliga Württemberg brocht (Saison 2024/25)?"],
+   a:[["Vier","Four","Vier"],["Zwei","Two","Zwoi"],["Elf","Eleven","Elf"],["Keinen, die sind hochgebeamt worden","None, they were beamed up","Koin, d send nuffgebeamt worda"]],
+   e:["Vier Aufstiege.","Four promotions.","Vier Ufstieg."]},
+  {q:["Seit welcher Saison ist das Frankenstadion die Heimstätte?","Since which season has the Frankenstadion been the home ground?","Seit welcher Saison isch s Frankestadion d Heimstätt?"],
+   a:[["2018/19","2018/19","2018/19"],["1969/70","1969/70","1969/70"],["1996/97","1996/97","1996/97"],["2025/26","2025/26","2025/26"]],
+   e:["Seit der Saison 2018/19.","Since the 2018/19 season.","Seit dr Saison 2018/19."]}
+ ]},
+{ id:"boss", ico:"👑", c:"var(--blue)", min:4,
+ t:["Bossrunde: Elfmeterschießen","Boss round: penalty shoot-out","Bossrond: Elfmeterschiaßa"],
+ sub:["Dein Zeitstrahl und das große Finale","Your timeline and the grand finale","Dei Zeitstrahl ond s große Finale"],
+ cards:[
+  [["Der Zeitstrahl","The timeline","Dr Zeitstrahl"],
+   ["1896 Gründung · 1956 Württembergischer Meister · 1969/70 Regionalliga · 12.12.1970 Pokal 2:0 gegen Offenbach · 1996 Jugend-Pokal · 2018 Neugründung · Frankenstadion seit 2018/19.","1896 founding · 1956 Württemberg champion · 1969/70 Regionalliga · 12.12.1970 cup win 2–0 against Offenbach · 1996 youth cup · 2018 new founding · Frankenstadion since 2018/19.","1896 Gründong · 1956 Württembergischer Meischter · 1969/70 Regionalliga · 12.12.1970 Pokal 2:0 gega Offeba · 1996 Jugend-Pokal · 2018 Neugründong · Frankestadion seit 2018/19."]],
+  [["Slogan und Seite","Slogan and website","Slogan ond Seite"],
+   ["„#derStadtclub“ steht auf der Vereinsseite. Dort findest du „Die Erste“, „Talentschmiede“, „Verein“, „Vision 2031“ und die Stellenbörse.","“#derStadtclub” is on the club website. There you find “Die Erste”, “Talentschmiede”, “Verein”, “Vision 2031” and the job board.","„#derStadtclub“ stoht uff dr Vereinsseite. Dort fendsch „Die Erste“, „Talentschmiede“, „Verein“, „Vision 2031“ ond d Stellenbörse."]],
+  [["Bereit für den Elfmeter?","Ready for the penalty?","Bereit fir da Elfmeter?"],
+   ["Fünf Fragen quer durch alle Spieltage. Tipp: Wer die Stammtisch-Wissen-Kästen gelesen hat, ist klar im Vorteil.","Five questions across all matchdays. Tip: anyone who read the Stammtisch knowledge boxes has a clear advantage.","Fünf Froga quer durch älle Spieltag. Tipp: Wer d Stammtisch-Wissa-Kästa gläsa hot, isch klar em Vorteil."]]
+ ],
+ pro:["Zum Schluss ein ehrlicher Hinweis: Alle Daten stammen aus den verlinkten Quellen mit Stand Oktober 2026; bei Abweichungen gilt die offizielle Vereinsseite.","A final honest note: all data comes from the linked sources as of October 2026; where they differ, the official club website applies.","Zom Schluss a ehrlicher Hinweis: Älle Date send us de verlinkte Quella mit Stand Oktober 2026; bei Abweichonga gilt d offizielle Vereinsseite."],
+ fun:["Boss besiegt? Dann gilt: Der wahre Endgegner ist der Parkplatz am Stadion.","Boss defeated? Then remember: the real final boss is the car park at the stadium.","Boss bsiegt? No gilt: Dr wahre Endgegner isch dr Parkplatz am Stadion."],
+ src:[["Wikipedia (DE): VfR Heilbronn",WPDE],["Offizielle Vereinsseite",SITE]],
+ q:[
+  {q:["Welche Vereinsfarben hat der VfR Heilbronn?","Which club colours does VfR Heilbronn have?","Welche Vereinsfarba hot dr VfR Hoilbronn?"],
+   a:[["Schwarz-Weiß","Black and white","Schwarz-Weiß"],["Rot-Weiß","Red and white","Rot-Weiß"],["Blau-Gelb","Blue and yellow","Blau-Gelb"],["Karo wie das Tischtuch","Checked like the tablecloth","Kariert wia s Dischduach"]],
+   e:["Schwarz-Weiß.","Black and white.","Schwarz-Weiß."]},
+  {q:["Wie lautet der Vereins-Hashtag auf der Seite?","What is the club hashtag on the website?","Wia lauted dr Vereins-Hashtag uff dr Seite?"],
+   a:[["#derStadtclub","#derStadtclub","#derStadtclub"],["#derDorfclub","#derDorfclub","#derDorfclub"],["#derWeltverein","#derWeltverein","#derWeltverein"],["#nixwieraus","#nixwieraus","#nixwieraus"]],
+   e:["#derStadtclub, so steht es auf der Vereinsseite.","#derStadtclub, as it says on the club website.","#derStadtclub, so stoht's uff dr Vereinsseite."]},
+  {q:["Was kam zuerst?","Which came first?","Was isch zerscht kumma?"],
+   a:[["Gründung (1896)","Founding (1896)","Gründong (1896)"],["Württ. Meister (1956)","Württemberg champion (1956)","Württ. Meischter (1956)"],["Pokalsieg gegen Offenbach (1970)","Cup win against Offenbach (1970)","Pokalsieg gega Offeba (1970)"],["Neugründung (2018)","New founding (2018)","Neugründong (2018)"]],
+   e:["1896, 1956, 1970, 2018: so die Reihenfolge.","1896, 1956, 1970, 2018: that is the order.","1896, 1956, 1970, 2018: so isch d Reihafolg."]},
+  {q:["Gegen wen schied der VfR 1970/71 im Achtelfinale aus?","Whom did VfR lose to in the round of 16 in 1970/71?","Gega wa isch dr VfR 1970/71 em Achtelfinale usgschieda?"],
+   a:[["Gegen Schalke 04","Against Schalke 04","Gega Schalke 04"],["Gegen Kickers Offenbach","Against Kickers Offenbach","Gega Kickers Offeba"],["Gegen den VfB Stuttgart","Against VfB Stuttgart","Gega da VfB Stuttgart"],["Gegen die Stammtisch-Auswahl","Against the Stammtisch XI","Gega d Stammtisch-Auswahl"]],
+   e:["0:4 gegen Schalke 04.","0–4 against Schalke 04.","0:4 gega Schalke 04."]},
+  {q:["Welcher Stammtisch hat dieses Quiz gebaut?","Which Stammtisch built this quiz?","Welcher Stammtisch hot des Quiz baut?"],
+   a:[["Thomas & Nobbe","Thomas & Nobbe","Thomas ond Nobbe"],["Hansi & Toni","Hansi & Toni","Hansi ond Toni"],["Jürgen & Jogi","Jürgen & Jogi","Jürgen ond Jogi"],["Pep & Carlo","Pep & Carlo","Pep ond Carlo"]],
+   e:["Die VfR-Hardcore-Fans Thomas & Nobbe. Wer sonst?","The VfR hardcore fans Thomas & Nobbe. Who else?","D VfR-Hardcore-Fans Thomas ond Nobbe. Wer sonscht?"]}
+ ]}
+];
+
+/* ---------- Hilfen ---------- */
+const $ = s => document.querySelector(s);
+function h(tag, o, ...kids){
+  const e = document.createElement(tag);
+  if(o) for(const k in o){ if(o[k] == null) continue; if(k === "class") e.className = o[k]; else if(k === "text") e.textContent = o[k]; else if(k.startsWith("on")) e[k] = o[k]; else e.setAttribute(k, o[k]); }
+  kids.flat().forEach(c => { if(c == null) return; e.append(c.nodeType ? c : document.createTextNode(c)); });
+  return e;
+}
+const starsOf = (p, n) => !p ? 0 : p.best === n ? 3 : p.best / n >= .75 ? 2 : p.best / n >= .5 ? 1 : 0;
+function totals(){
+  let st = 0, co = 0, dn = 0;
+  LESSONS.forEach(l => { const p = prog[l.id]; const s = starsOf(p, l.q.length); st += s; co += p ? p.best * 10 : 0; if(s >= 1) dn++; });
+  return {st, co, dn};
+}
+const rankName = st => { let r = RANKS[0]; RANKS.forEach(x => { if(st >= x[0]) r = x; }); return r[1][li]; };
+const starRow = n => h("span", {class:"stars", "aria-label": n + " / 3 " + t("starsOf")}, [0,1,2].map(i => h("span", {class: i < n ? "" : "off", "aria-hidden":"true"}, "★")));
+const announce = m => { $("#live").textContent = ""; setTimeout(() => { $("#live").textContent = m; }, 30); };
+function focusMain(){ const m = $("#main"); m.focus({preventScroll:true}); window.scrollTo({top:0, behavior:"auto"}); }
+function confetti(){
+  if(matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+  const w = h("div", {class:"conf", "aria-hidden":"true"}); const cols = ["#c62d33","#2a4bd7","#ffc800","#1b7a3d","#6b3fa0"];
+  for(let i = 0; i < 36; i++){ const s = h("i"); s.style.left = Math.random()*100 + "%"; s.style.background = cols[i % cols.length]; s.style.animationDelay = Math.random()*.6 + "s"; s.style.animationDuration = 1.6 + Math.random()*1.2 + "s"; w.append(s); }
+  document.body.append(w); setTimeout(() => w.remove(), 3400);
+}
+const idxOf = id => LESSONS.findIndex(l => l.id === id);
+
+/* ---------- Ansichten ---------- */
+function renderHome(){
+  const T = totals(), pct = Math.round(T.dn / LESSONS.length * 100); const m = $("#main"); m.replaceChildren();
+  const nextL = LESSONS.find(l => !earned(l)), boss = LESSONS[LESSONS.length-1], started = T.dn > 0;
+  m.append(h("section", {class:"hero", "aria-labelledby":"h1"},
+    h("div", null,
+      h("h1", {id:"h1", text:hasName() ? fill(t("helloN")) : t("hello")}),
+      h("p", {text:t("introH")}),
+      hasName() ? h("button", {type:"button", class:"linkbtn namebtn", "aria-label":t("nameChange") + ": " + fname(), onclick:() => { editName = true; render(true); }}, "✎ " + fname() + " · " + t("nameChange")) : null),
+    h("div", {class:"ring", style:"--p:" + pct, role:"img", "aria-label": T.dn + " / " + LESSONS.length + " " + t("done")}, h("span", {text:T.dn + "/" + LESSONS.length})),
+h("div", {class:"stats", role:"list"},
+        h("div", {class:"stat", role:"listitem"}, h("span", {class:"sv", text:"🏅 " + rankName(T.st)}), h("span", {class:"sl", text:t("rank")})),
+        h("div", {class:"stat", role:"listitem"}, h("span", {class:"sv", text:"⚽ " + T.co}), h("span", {class:"sl", text:t("coins")})),
+        h("div", {class:"stat", role:"listitem"}, h("span", {class:"sv", text:"★ " + T.st + "/" + LESSONS.length*3}), h("span", {class:"sl", text:t("starsOf")})))));
+  if((!hasName() && !ach.skip) || editName){
+    const inp = h("input", {id:"nmq", type:"text", maxlength:"40", autocomplete:"given-name", placeholder:t("nameP2"), value:nm});
+    const done = v => { nm = v.trim().slice(0, 40); editName = false; ach.skip = !nm; save(); render(true); };
+    const form = h("form", {class:"nameq", "aria-labelledby":"nq"},
+      h("label", {for:"nmq", id:"nq", text:"👋 " + t("nameQ")}), h("small", {text:t("nameSub")}), inp,
+      h("div", {class:"row", style:"justify-content:flex-start;align-items:center;margin-top:8px;gap:6px 14px"},
+        h("button", {type:"submit", class:"btn"}, t("nameOk")),
+        h("button", {type:"button", class:"linkbtn", onclick:() => { editName = false; ach.skip = true; if(!hasName()) nm = ""; save(); render(true); }}, t("nameSkip"))));
+    form.onsubmit = e => { e.preventDefault(); done(inp.value); };
+    m.append(form);
+  }
+  if(nextL){
+    const first = started ? h("button", {type:"button", class:"choice pri", onclick:() => go("lesson", nextL.id)}, h("span", {class:"ci", "aria-hidden":"true"}, nextL.ico), h("span", null, h("b", {text:t("contB")}), h("small", {text:nextL.t[li]})))
+                          : h("button", {type:"button", class:"choice pri", onclick:() => go("lesson", LESSONS[0].id)}, h("span", {class:"ci", "aria-hidden":"true"}, "🌱"), h("span", null, h("b", {text:t("newB")}), h("small", {text:t("newS")})));
+    const vet = nextL === boss ? null : h("button", {type:"button", class:"choice", onclick:() => go("lesson", boss.id)}, h("span", {class:"ci", "aria-hidden":"true"}, "🏆"), h("span", null, h("b", {text:t("oldB")}), h("small", {text:t("oldS")})));
+    m.append(h("div", {class:"choices"}, first, vet));
+    m.append(h("p", {class:"pitch", text:"✨ " + (hasName() ? fill(t("greetN")) : t("pitch"))}));
+  }  if(T.dn === LESSONS.length) m.append(h("div", {class:"bubble", role:"status"}, h("small", {text:"🎉"}), t("allDone")));
+  m.append(spruchCard());
+  m.append(h("h2", {class:"sec secrow"}, h("span", {text:t("lessons")}), h("span", {class:"cnt", text:T.dn + " / " + LESSONS.length + " " + t("done")})));
+  const g = h("div", {class:"grid"});
+  LESSONS.forEach((l, i) => {
+    const p = prog[l.id], s = starsOf(p, l.q.length);
+    const b = h("button", {type:"button", class:"lcard" + (s >= 1 ? " done" : "") + (nextL === l ? " nextup" : ""), style:"--c:" + l.c + ";animation-delay:" + i*60 + "ms", onclick:() => go("lesson", l.id)},
+      h("span", {class:"ico", "aria-hidden":"true"}, l.ico),
+      h("span", {class:"nr", text:(i+1) + " / " + LESSONS.length}),
+      h("h3", {text:l.t[li]}), h("p", {text:l.sub[li]}),
+      h("span", {class:"foot"}, h("span", {text:"⏱ " + l.min + " " + t("min")}), p ? starRow(s) : h("span", {text:t("start") + " →"})));
+    g.append(b);
+  });
+  m.append(g);
+  m.append(certList());
+  m.append(installCard());
+  m.append(vfrLinks());
+  m.append(h("p", {style:"margin-top:26px;text-align:center"}, h("button", {type:"button", class:"btn ghost", onclick:() => { if(confirm(t("resetQ"))){ prog = {}; save(); render(); } }}, "↺ " + t("reset"))));
+}
+const SPR = [
+ ["g",["Warum nimmt Nobbe immer zwei Bier mit zum Spiel? Falls die Verlängerung kommt.","Why does Nobbe always take two beers to the match? In case of extra time.","Worom nimmt dr Nobbe immer zwoi Bier zom Spiel mit? Falls d Verlängerong kommt."]],
+ ["g",["Thomas sagt: Abseits ist, wenn der Schiedsrichter so tut, als hätte er es gesehen.","Thomas says: offside is when the referee pretends he saw it.","Dr Thomas sait: Abseits isch, wenn dr Schiedsrichter so doot, als hät r s gsäh."]],
+ ["g",["Nobbes Taktik-Tipp: „Einfach mehr Tore schießen als die anderen.“ Genial, aber schwer umzusetzen.","Nobbe's tactical tip: “Just score more goals than the others.” Brilliant, but hard to implement.","Em Nobbe sei Taktik-Tipp: „Oifach mehr Tore schiaßa als d andra.“ Genial, aber schwär omzsetza."]],
+ ["g",["Unterschied zwischen Stammtisch und Trainerbank: Am Stammtisch weiß man alles besser und es zahlt trotzdem keiner.","Difference between Stammtisch and dugout: at the Stammtisch everyone knows better and still nobody pays.","Onterschied zwischa Stammtisch ond Trainerbank: Am Stammtisch woiß ma älles bessr ond zahla duat trotzdem koiner."]],
+ ["g",["Am Stammtisch gibt es drei Wahrheiten: Thomas', Nobbes und die vom Wirt. Die vierte ist die Tabelle.","At the Stammtisch there are three truths: Thomas', Nobbe's and the landlord's. The fourth is the league table.","Am Stammtisch gibt's drei Wahrhoita: dr Thomas sei, dr Nobbe sei ond dr Wirt sei. D vierte isch d Tabell."]],
+ ["g",["Schwäbisches Prinzip: Schaffe, schaffe, Häusle baue. Beim Stadtclub: Schaffe, schaffe, Aufstieg baue.","Swabian principle: work, work, build a little house. At the city club: work, work, build a promotion.","Schwäbisches Prinzip: Schaffe, schaffe, Häusle baue. Beim Stadtclub: Schaffe, schaffe, Ufstieg baue."]],
+ ["g",["Ein Schwabe im Stadion: „Eintritt gratis? Dann nehm ich die ganze Verwandtschaft mit.“","A Swabian at the stadium: “Free admission? Then I'm bringing the whole family.”","A Schwob em Stadion: „Eigtritt gratis? No nehm i d ganz Verwandtschaft mit.“"]],
+ ["f",["Der VfR wurde 1896 im Lokal „Zur Hopfenblüte“ gegründet, dem ersten Stammtisch der Vereinsgeschichte.","VfR was founded in 1896 in the pub “Zur Hopfenblüte”, the first Stammtisch in club history.","Dr VfR isch 1896 em Lokal „Zur Hopfenblüte“ gründet worda, em erschde Stammtisch vo dr Vereinsgschicht."]],
+ ["f",["Am 12. Dezember 1970 schlug der VfR im DFB-Pokal Kickers Offenbach mit 2:0, vor rund 15.000 Zuschauern.","On 12 December 1970 VfR beat Kickers Offenbach 2–0 in the DFB-Pokal in front of about 15,000 spectators.","Am 12. Dezember 1970 hot dr VfR em DFB-Pokal Kickers Offeba mit 2:0 gschlaga, vor rond 15.000 Zuschauer."]],
+ ["f",["1969/70 kamen im Schnitt rund 10.000 Zuschauer. Da war der Stammtisch noch eine Massenveranstaltung.","In 1969/70 about 10,000 spectators came on average. Back then the Stammtisch was a mass event.","1969/70 sen em Schnitt rond 10.000 Zuschauer kumma. Do war dr Stammtisch no a Massaveranstaltong."]],
+ ["f",["1996 gewann die A-Jugend den DFB-Jugend-Kicker-Pokal mit 6:1, vor 8.000 Zuschauern.","In 1996 the under-19s won the DFB-Jugend-Kicker-Pokal 6–1, in front of 8,000 spectators.","1996 hot d A-Jugend da DFB-Jugend-Kicker-Pokal mit 6:1 gwonne, vor 8.000 Zuschauer."]],
+ ["f",["Ralf Rangnick spielte von 1980 bis 1982 beim VfR Heilbronn. Auch große Trainer haben mal klein angefangen.","Ralf Rangnick played for VfR Heilbronn from 1980 to 1982. Even great coaches started small once.","Dr Ralf Rangnick hot vo 1980 bis 1982 beim VfR Hoilbronn gspielt. Au große Trainer hent mol klei agfanga."]],
+ ["f",["Neustart am 16. Mai 2018 in der Kreisliga B, vier Aufstiege später Verbandsliga. Da hat der Stammtisch Kilometer gesammelt.","New start on 16 May 2018 in Kreisliga B, four promotions later Verbandsliga. The Stammtisch collected plenty of miles.","Neustart am 16. Mai 2018 en dr Kreisliga B, vier Ufstieg spädr Verbandsliga. Do hot dr Stammtisch Kilometer gsammlet."]],
+ ["f",["Seit 2020/21 kooperiert die Jugend des VfR mit dem VfB Stuttgart.","Since 2020/21 the VfR youth section has cooperated with VfB Stuttgart.","Seit 2020/21 arbeitet d Jugend vom VfR mit am VfB Stuttgart zamma."]],
+ ["f",["Schwarz-Weiß sind die Vereinsfarben. Praktisch: Bierflecken fallen weder auf dem einen noch auf dem anderen auf.","Black and white are the club colours. Handy: beer stains show on neither.","Schwarz-Weiß send d Vereinsfarba. Praktisch: Bierfleck falled weder uff dem oina no uff dem andra uff."]]
+];
+
+let sprI = Math.floor(Math.random() * SPR.length);
+function spruchCard(){
+  const x = SPR[sprI];
+  const c = h("section", {class:"spruch", "aria-labelledby":"spt"}, h("h2", {class:"sec", id:"spt", text:t("spruchT")}), h("p", {class:"stag", text:t(x[0] === "g" ? "spruchG" : "spruchF")}), h("p", {class:"stxt", text:x[1][li]}));
+  c.append(h("button", {type:"button", class:"btn ghost", onclick:() => { let n = sprI; while(n === sprI) n = Math.floor(Math.random() * SPR.length); sprI = n; render(true); }}, "🔁 " + t("spruchB")));
+  return c;
+}
+function crumbBar(label, fn, ctx){
+  const b = h("button", {type:"button", class:"back", "aria-label":label + (ctx ? ": " + ctx : ""), onclick:fn});
+  b.innerHTML = '<svg viewBox="0 0 24 24" width="24" height="24" aria-hidden="true" focusable="false"><path d="M15 5l-7 7 7 7" fill="none" stroke="currentColor" stroke-width="3.2" stroke-linecap="round" stroke-linejoin="round"/></svg>';
+  b.append(h("span", {text:label}));
+  const bar = h("div", {class:"crumb"}, b); if(ctx) bar.append(h("span", {class:"ctx", "aria-hidden":"true", text:ctx})); return bar;
+}
+function renderLesson(l){
+  const m = $("#main"); m.replaceChildren(); const i = idxOf(l.id);
+  m.style.setProperty("--c", l.c);
+  m.append(crumbBar(t("back"), () => go("home")));
+  m.append(h("div", {class:"lhead"}, h("span", {class:"big", "aria-hidden":"true"}, l.ico), h("div", null, h("h1", {id:"h1", text:l.t[li]}), h("p", {text:l.sub[li]}))));
+  l.cards.forEach((c, k) => { const d = h("section", {class:"card", style:"animation-delay:" + k*120 + "ms"}, h("h2", null, h("span", {class:"n", "aria-hidden":"true"}, k+1), c[0][li]), h("p", {text:c[1][li]})); m.append(d); });
+  m.append(h("details", {class:"pro", style:"--c:" + l.c}, h("summary", {text:t("pro")}), h("p", {text:l.pro[li]})));
+  m.append(h("div", {class:"bubble"}, h("small", {text:"😄 " + t("fun")}), l.fun[li]));
+  m.append(h("div", {class:"src"}, h("strong", {text:t("src")}), h("ul", null, l.src.map(s => h("li", null, h("a", {href:s[1], rel:"noopener"}, s[0]))))));
+  m.append(h("div", {class:"sticky"}, h("button", {type:"button", class:"btn", id:"go", onclick:() => startQuiz(l)}, (prog[l.id] ? t("cont") : t("quiz")) + " →")));
+}
+function shuffle(n){ const a = [...Array(n).keys()]; for(let i = n-1; i > 0; i--){ const j = Math.floor(Math.random()*(i+1)); [a[i], a[j]] = [a[j], a[i]]; } return a; }
+function startQuiz(l){
+  if(!hasName() && !ach.askedQuiz){ view = {v:"namegate", id:l.id}; render(); return; }
+  beginQuiz(l);
+}
+function renderGate(l){
+  const m = $("#main"); m.replaceChildren(); m.style.setProperty("--c", l.c);
+  m.append(crumbBar(t("backL"), () => go("lesson", l.id), l.t[li]));
+  const inp = h("input", {id:"nmg", type:"text", maxlength:"40", autocomplete:"given-name", placeholder:t("nameP2"), value:nm});
+  const go2 = skip => { if(!skip) nm = inp.value.trim().slice(0, 40); ach.askedQuiz = true; if(nm) ach.skip = false; save(); beginQuiz(l); };
+  const form = h("form", {class:"nameq", "aria-labelledby":"h1"},
+    h("h1", {id:"h1", style:"margin:0;font-size:1.35rem", text:"🏁 " + t("gateT")}), h("small", {text:t("gateS")}),
+    h("label", {for:"nmg", class:"sr", text:t("nameQ")}), inp,
+    h("div", {class:"row", style:"justify-content:flex-start;align-items:center;margin-top:8px;gap:6px 14px"},
+      h("button", {type:"submit", class:"btn"}, t("gateGo") + " →"),
+      h("button", {type:"button", class:"linkbtn", onclick:() => go2(true)}, t("gateSkip"))));
+  form.onsubmit = e => { e.preventDefault(); go2(false); };
+  m.append(form);
+}
+function beginQuiz(l){ view = {v:"quiz", id:l.id, n:0, right:0, qs:l.q.map(q => ({order:shuffle(q.a.length), picked:null}))}; location.hash = "quiz-" + l.id; render(); }
+function renderQuiz(l){
+  const m = $("#main"); m.replaceChildren(); m.style.setProperty("--c", l.c);
+  const Q = l.q[view.n], st = view.qs[view.n], total = l.q.length; const done = st.picked !== null;
+  m.append(crumbBar(t("backL"), () => go("lesson", l.id), l.t[li]));
+  m.append(h("div", {class:"dots", role:"img", "aria-label": t("qof") + " " + (view.n+1) + " " + t("of") + " " + total}, view.qs.map((s, i) => h("i", {class: s.picked !== null ? (s.order[s.picked] === 0 ? "on" : "no") : i === view.n ? "cur" : ""}))));
+  m.append(h("p", {style:"margin:0 0 4px;color:var(--mute);font-weight:700", text:t("qof") + " " + (view.n+1) + " " + t("of") + " " + total}));
+  if(hasName() && (view.n === 0 || view.n === total - 1)) m.append(h("p", {class:"qp", text:"🎯 " + fill(t(view.n === 0 && total > 1 ? "qFirst" : view.n === 0 ? "qFirst" : "qLast"))}));
+  m.append(h("h1", {class:"qq", id:"h1", text:Q.q[li]}));
+  const box = h("div", {class:"opts", role:"group", "aria-labelledby":"h1"});
+  st.order.forEach((ai, pos) => {
+    const cls = ["opt"]; if(done){ if(ai === 0) cls.push("right"); else if(pos === st.picked) cls.push("wrong"); else cls.push("dim"); }
+    const b = h("button", {type:"button", class:cls.join(" "), disabled: done ? "" : null, "data-pos":pos, onclick:() => answer(l, pos)}, h("span", {class:"k", "aria-hidden":"true"}, "ABCD"[pos]), h("span", {text:Q.a[ai][li]}));
+    if(done) b.disabled = true;
+    box.append(b);
+  });
+  m.append(box);
+  if(done){
+    const ok = st.order[st.picked] === 0; const f = h("div", {class:"fb " + (ok ? "ok" : "bad"), role:"status"}, h("b", {text:(ok ? "✅ " + t("correct") : "❌ " + t("wrong")) + " " + fill(st.msgSet[li])}));
+    if(!ok) f.append(h("div", null, t("solution") + " " + Q.a[0][li]));
+    f.append(h("div", {style:"margin-top:6px;font-weight:500", text:Q.e[li]}));
+    if(st.firstHit) f.append(h("div", {class:"ach", text:"🏆 " + t("achFirst")}));
+    m.append(f);
+    const last = view.n === total - 1;
+    m.append(h("div", {class:"next"}, h("button", {type:"button", class:"btn", id:"nx", onclick:() => { if(last){ finishQuiz(l); } else { view.n++; render(); } }}, (last ? t("finish") : t("next")) + " →")));
+  }
+}
+function answer(l, pos){
+  const st = view.qs[view.n]; if(st.picked !== null) return; st.picked = pos; const ok = st.order[pos] === 0; if(ok) view.right++; if(ok && !ach.first){ ach.first = true; save(); st.firstHit = true; }
+  st.msgSet = (ok ? (hasName() ? OKN : OKS) : (hasName() ? BADN : BADS))[Math.floor(Math.random()*4)];
+  render(true);
+}
+function finishQuiz(l){
+  const n = l.q.length, p = prog[l.id]; if(view.right > (p ? p.best : 0)) prog[l.id] = {best:view.right}; save();
+  view = {v:"result", id:l.id, right:view.right}; render();
+}
+function renderResult(l){
+  const m = $("#main"); m.replaceChildren(); const n = l.q.length, s = view.right === n ? 3 : view.right/n >= .75 ? 2 : view.right/n >= .5 ? 1 : 0;
+  const i = idxOf(l.id), nxt = LESSONS[i+1]; const pass = s >= 1;
+  m.append(h("section", {class:"res"},
+    h("div", {class:"bigstars", role:"img", "aria-label": s + " / 3 " + t("starsOf")}, [0,1,2].map(k => h("span", {class:k < s ? "" : "off"}, "★"))),
+    h("h1", {id:"h1", text:hasName() ? fill(t(pass ? "passN" : "tryN")) : (pass ? t("pass") : t("tryAgain"))}),
+    h("p", {text:t("res") + ": " + view.right + " " + t("of") + " " + n + " · " + view.right*10 + " " + t("coins")})));
+  if(pass){ m.append(h("p", {class:"pitch", style:"margin:0 0 6px", text:"🏅 " + t("certNow")})); certBlock(m, l); }
+  const save1 = () => savePng(certSVG(l), "vfr_stadtclub_" + l.id + "_" + (nm.trim() || "name").replace(/[^\p{L}\p{N}]+/gu, "_") + ".png");
+  const bNext = nxt && pass ? h("button", {type:"button", class:"btn", onclick:() => go("lesson", nxt.id)}, t("nextL") + " →") : null;
+  const bSave = pass ? h("button", {type:"button", class:"btn" + (bNext ? " ghost" : ""), onclick:save1}, "⬇ " + t("dl")) : null;
+  const bRetry = h("button", {type:"button", class:"btn" + (pass ? " ghost" : ""), onclick:() => startQuiz(l)}, "↺ " + t("retry"));
+  const bHome = h("button", {type:"button", class:"btn ghost", onclick:() => go("home")}, t("over"));
+  m.append(h("div", {class:"row"}, bNext, bSave, bRetry, bHome));  m.append(nLink());
+  if(pass) confetti();
+}
+const NHIST = "https://de.wikipedia.org/wiki/VfR_Heilbronn", NCORP = "";
+function vfrLinks(){
+  const w = h("section", {"aria-labelledby":"nh"}); const g = h("div", {class:"certlist"});
+  [["⚽", t("nSite"), NURL[li][0], NURL[li][1]], ["📜", t("nHist"), NHIST, "de.wikipedia.org"], ["🌍", t("nCorp"), NCORP, ""]].filter(x => x[2]).forEach(x => g.append(h("a", {class:"btn ghost", href:x[2], rel:"noopener"}, h("span", {"aria-hidden":"true"}, x[0]), h("span", null, x[1], h("small", {style:"display:block;font-weight:600;color:var(--mute)", text:x[3]})))));
+  w.append(h("h2", {class:"sec", id:"nh", text:"⚽ " + t("nSec")}), g); return w;
+}
+function nLink(){ return h("p", {style:"text-align:center;margin:18px 0 0"}, h("a", {href:NURL[li][0], rel:"noopener", class:"nlink"}, "⚽ " + t("moreN") + " (" + NURL[li][1] + ") →")); }
+function certBlock(m, l){
+  const fld = h("div", {class:"field"}, h("label", {for:"nm", text:t("nameL")}), h("input", {id:"nm", type:"text", maxlength:"40", autocomplete:"name", placeholder:t("nameP"), value:nm}));
+  const box = h("div", {class:"certbox"}); box.innerHTML = certSVG(l);
+  fld.querySelector("input").oninput = e => { nm = e.target.value; save(); box.innerHTML = certSVG(l); };
+  m.append(fld, box);
+}
+/* ---------- Zertifikate ---------- */
+const CT = {
+ head:["STADTCLUB-ZERTIFIKAT","CITY CLUB CERTIFICATE","STADTCLUB-ZERTIFIKAT"],
+ headM:["MEISTER-ZERTIFIKAT","MASTER CERTIFICATE","MEISCHTER-ZERTIFIKAT"],
+ conf:["Hiermit wird feierlich und mit Bierdeckel-Stempel bestätigt, dass","It is hereby solemnly and with a beer-mat stamp confirmed that","Hiermit wird feierlich ond mit Bierdeckel-Stempel bstätigt, dass"],
+ did:["den Spieltag gewonnen hat:","has won the matchday:","da Spieltag gwonne hot:"],
+ didM:["alle sieben Spieltage gewonnen hat und damit Stadtclub-Wissen auf Profi-Niveau besitzt.","has won all seven matchdays and now holds pro-level city-club knowledge.","älle siebe Spieltag gwonne hot ond domit Stadtclub-Wissa uff Profi-Niveau hot."],
+ score:["richtig","correct","richtig"],
+ lines:[["Geschafft! Jede Vereinslegende hat mal auf der Bank angefangen.","Done! Every club legend started out on the bench.","Gschafft! Jede Vereinslegende hot mol uff dr Bank agfanga."],
+        ["Stark! Der nächste Spieltag wartet schon auf dich.","Strong! The next matchday is already waiting for you.","Stark! Dr nägschd Spieltag wartet scho uff di."],
+        ["Perfekt! Ein Tor wie in der 90. Minute.","Perfect! A goal like in the 90th minute.","Perfekt! A Tor wia en dr 90. Minuta."]],
+ linesN:[["Geschafft, {n}! Jede Vereinslegende hat mal auf der Bank angefangen.","Done, {n}! Every club legend started out on the bench.","Gschafft, {n}! Jede Vereinslegende hot mol uff dr Bank agfanga."],
+        ["Stark, {n}! Der nächste Spieltag wartet schon auf dich.","Strong, {n}! The next matchday is already waiting for you.","Stark, {n}! Dr nägschd Spieltag wartet scho uff di."],
+        ["Perfekt, {n}! Ein Tor wie in der 90. Minute.","Perfect, {n}! A goal like in the 90th minute.","Perfekt, {n}! A Tor wia en dr 90. Minuta."]],
+ lineMN:["{n}, du bist offiziell ein Stadtclub-Experte (inoffiziell). Die erste Runde geht auf Thomas!","{n}, you are officially a city-club expert (unofficially). The first round is on Thomas!","{n}, du bisch offiziell a Stadtclub-Experte (inoffiziell). D erschd Rond goht uff da Thomas!"],
+ lineM:["Du bist offiziell ein Stadtclub-Experte (inoffiziell). Die erste Runde geht auf Thomas!","You are officially a city-club expert (unofficially). The first round is on Thomas!","Du bisch offiziell a Stadtclub-Experte (inoffiziell). D erschd Rond goht uff da Thomas!"],
+ rankL:["Rang","Rank","Rang"],
+ date:["Datum","Date","Datum"],
+ sign:["Thomas & Nobbe (inoffiziell)","Thomas & Nobbe (unofficial)","Thomas ond Nobbe (inoffiziell)"],
+ foot:["Inoffizielles Fan-Projekt der VfR-Hardcore-Fans Thomas & Nobbe · kein Produkt des VfR Heilbronn","Unofficial fan project by the VfR hardcore fans Thomas & Nobbe · not a product of VfR Heilbronn","Inoffizielles Fan-Projekt vo de VfR-Hardcore-Fans Thomas ond Nobbe · koi Produkt vom VfR Hoilbronn"]
+};
+const esc = s => String(s).replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function wrap(s, n){
+  if(s.length <= n) return [s];
+  if(/\s/.test(s)){ const w = s.split(/\s+/), out = []; let cur = ""; w.forEach(x => { if((cur + " " + x).trim().length > n && cur){ out.push(cur); cur = x; } else cur = (cur + " " + x).trim(); }); if(cur) out.push(cur); return out.slice(0, 3); }
+  const out = []; for(let i = 0; i < s.length; i += n) out.push(s.slice(i, i + n)); return out.slice(0, 3);
+}
+const earned = l => starsOf(prog[l.id], l.q.length) >= 1;
+const allEarned = () => LESSONS.every(earned);
+function certSVG(l){
+  const M = !l, g = k => CT[k][li], n = nm.trim();
+  const T = totals(), st = M ? T.st : starsOf(prog[l.id], l.q.length), right = M ? 0 : prog[l.id].best;
+  const d = new Date().toLocaleDateString(({de:"de-DE", en:"en-GB", swg:"de-DE"})[LANGS[li][0]], {day:"2-digit", month:"long", year:"numeric"});
+  const F = 'font-family="Trebuchet MS, Segoe UI, Hiragino Maru Gothic ProN, Yu Gothic UI, Meiryo, sans-serif"';
+  const ew = [...n].reduce((s, c) => s + (/[WMm@]/.test(c) ? 1.05 : /\s/.test(c) ? .3 : /[\u3000-\u9fff\uff00-\uffef]/.test(c) ? 1.25 : /[A-ZÄÖÜ]/.test(c) ? .74 : /[ilj.,'!|]/.test(c) ? .3 : .58), 0);
+  const nsz = n ? Math.max(16, Math.min(64, Math.floor(860 / Math.max(6, ew)))) : 34;
+  const ja = LANGS[li][0] === "ja", tl = M ? wrap(g("didM"), ja ? 30 : 52) : wrap(l.t[li], ja ? 22 : 38);
+  const stars = [0,1,2].map(k => '<text x="' + (561.5 + (k-1)*70) + '" y="' + (M ? 575 : 585) + '" font-size="58" text-anchor="middle" fill="' + (M || k < st ? "#ffc800" : "#d9d9de") + '" stroke="' + (M || k < st ? "#b58900" : "#b8b9bd") + '" stroke-width="2">★</text>').join("");
+  const band = ["#c62d33","#2a4bd7","#ffc800","#1b7a3d","#6b3fa0"].map((c, i) => '<rect x="' + (60 + i*200.6) + '" y="36" width="200.6" height="16" fill="' + c + '"/>').join("");
+  const conf = [[110,150,"#2a4bd7"],[1010,170,"#ffc800"],[130,640,"#1b7a3d"],[1000,650,"#6b3fa0"],[90,330,"#ffc800"],[1030,360,"#c62d33"],[160,230,"#c62d33"],[960,250,"#1b7a3d"]].map(a => '<rect x="' + a[0] + '" y="' + a[1] + '" width="16" height="16" rx="3" transform="rotate(' + (a[0]%40-20) + ' ' + a[0] + ' ' + a[1] + ')" fill="' + a[2] + '"/>').join("");
+  const head = M ? g("headM") : g("head");
+  const hs = Math.min(72, Math.floor(860 / (head.length * 0.78)));
+  const line = hasName() ? fill(M ? CT.lineMN[li] : CT.linesN[Math.max(0, st-1)][li]) : (M ? g("lineM") : CT.lines[Math.max(0, st-1)][li]);
+  const rank = rankName(T.st);
+  const lw = [...line].reduce((s, c) => s + (/[WMm@]/.test(c) ? 1.05 : /\s/.test(c) ? .3 : /[A-ZÄÖÜ]/.test(c) ? .74 : /[ilj.,'!|]/.test(c) ? .3 : .56), 0), lsz = Math.max(13, Math.min(22, Math.floor(960 / lw)));
+  return '<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1123 794" width="1123" height="794" role="img" aria-label="' + esc(head + (n ? " – " + n : "") + (M ? "" : " – " + l.t[li])) + '">'
+   + '<rect width="1123" height="794" rx="28" fill="#ffffff"/>'
+   + '<rect x="14" y="14" width="1095" height="766" rx="22" fill="none" stroke="#c62d33" stroke-width="10"/>'
+   + '<rect x="34" y="34" width="1055" height="726" rx="14" fill="none" stroke="#e1e2e5" stroke-width="2" stroke-dasharray="10 8"/>'
+   + band + conf
+   + '<text x="561.5" y="140" text-anchor="middle" font-size="' + hs + '" font-weight="800" letter-spacing="4" fill="#c62d33" ' + F + '>' + esc(head) + '</text>'
+   + '<text x="561.5" y="172" text-anchor="middle" font-size="16" font-weight="700" letter-spacing="4" fill="#2a4bd7" ' + F + '>STADTCLUB-QUIZ</text>'
+   + '<text x="561.5" y="203" text-anchor="middle" font-size="22" fill="#4d4f54" ' + F + '>' + esc(g("conf")) + '</text>'
+   + '<text x="561.5" y="270" text-anchor="middle" font-size="' + nsz + '" font-weight="800" fill="' + (n ? "#1f2026" : "#b8b9bd") + '" ' + F + '>' + esc(n || t("nameP")) + '</text>'
+   + '<line x1="250" y1="290" x2="873" y2="290" stroke="#c62d33" stroke-width="4" stroke-linecap="round"/>'
+   + (M ? '' : '<text x="561.5" y="338" text-anchor="middle" font-size="22" fill="#4d4f54" ' + F + '>' + esc(g("did")) + '</text>')
+   + tl.map((x, i) => '<text x="561.5" y="' + ((M ? 350 : 392) + i*40) + '" text-anchor="middle" font-size="' + (M ? 26 : 34) + '" font-weight="700" fill="#2a4bd7" ' + F + '>' + esc(x) + '</text>').join("")
+   + (M ? '<text x="561.5" y="440" text-anchor="middle" font-size="26" font-weight="800" fill="#1b7a3d" ' + F + '>' + esc(t("certMasterBadge")) + '</text>' : '<text x="561.5" y="' + (392 + (tl.length-1)*40 + 50) + '" text-anchor="middle" font-size="24" font-weight="700" fill="#1f2026" ' + F + '>' + esc(right + " / " + l.q.length + " " + g("score")) + '</text>')
+   + stars
+   + '<text x="561.5" y="640" text-anchor="middle" font-size="' + lsz + '" font-style="italic" fill="#4d4f54" ' + F + '>' + esc(line) + '</text>'
+   + '<text x="110" y="712" font-size="15" fill="#565860" ' + F + '>' + esc(g("date") + ": " + d) + '</text>'
+   + '<text x="110" y="736" font-size="15" fill="#565860" ' + F + '>' + esc(g("rankL") + ": " + rank) + '</text>'
+   + '<circle cx="561.5" cy="695" r="38" fill="#ffffff" stroke="#c62d33" stroke-width="5"/><g transform="translate(535.5 677) scale(3.25)">' + logoRects() + '</g>'
+   + '<text x="1013" y="712" text-anchor="end" font-size="16" font-style="italic" fill="#1f2026" ' + F + '>' + esc(g("sign")) + '</text>'
+   + '<line x1="760" y1="720" x2="1013" y2="720" stroke="#1f2026" stroke-width="1.5"/>'
+   + '<text x="561.5" y="759" text-anchor="middle" font-size="16" font-weight="700" fill="#2a4bd7" ' + F + '>' + esc(NURL[li][1]) + '</text>'
+   + '<text x="561.5" y="778" text-anchor="middle" font-size="12" fill="#6b6d73" ' + F + '>' + esc(g("foot") + " · v" + VERSION) + '</text>'
+   + '</svg>';
+}
+function renderCert(l){
+  const m = $("#main"); m.replaceChildren(); const M = !l;
+  m.append(crumbBar(t("back"), () => go("home")));
+  m.append(h("h1", {id:"h1", text:"🏅 " + (M ? t("master") : t("certOf") + ": " + l.t[li])}));
+  const box = null; certBlock(m, l);
+  const nameSafe = (nm.trim() || "name").replace(/[^\p{L}\p{N}]+/gu, "_");
+  m.append(h("div", {class:"row"},
+    h("button", {type:"button", class:"btn", onclick:() => savePng(certSVG(l), "vfr_stadtclub_" + (M ? "master" : l.id) + "_" + nameSafe + ".png")}, "⬇ " + t("dl")),
+    h("button", {type:"button", class:"btn ghost", onclick:() => window.print()}, "🖨 " + t("prt")),
+    h("button", {type:"button", class:"btn ghost", onclick:() => go("home")}, t("over"))));
+  m.append(nLink());
+  if(!matchMedia("(prefers-reduced-motion: reduce)").matches) confetti();
+}
+function savePng(svg, name){
+  const url = URL.createObjectURL(new Blob([svg], {type:"image/svg+xml;charset=utf-8"})), img = new Image();
+  img.onload = () => { const c = document.createElement("canvas"); c.width = 1123; c.height = 794; const x = c.getContext("2d"); x.fillStyle = "#fff"; x.fillRect(0, 0, 1123, 794); x.drawImage(img, 0, 0); URL.revokeObjectURL(url); c.toBlob(b => { const a = document.createElement("a"); a.href = URL.createObjectURL(b); a.download = name; document.body.append(a); a.click(); a.remove(); }); };
+  img.src = url;
+}
+function certList(){
+  const got = LESSONS.filter(earned); const w = h("section", {"aria-labelledby":"ch"}); 
+  w.append(h("h2", {class:"sec", id:"ch", text:"🏅 " + t("certs")}), h("p", {style:"margin:0 0 12px;color:var(--mute)", text:t("certsHint")}));
+  const g = h("div", {class:"certlist"});
+  if(allEarned()) g.append(h("button", {type:"button", class:"btn mastercard", onclick:() => go("cert", "master")}, "👑 " + t("master")));
+  got.forEach(l => g.append(h("button", {type:"button", class:"btn ghost", onclick:() => go("cert", l.id)}, l.ico + " " + l.t[li])));
+  w.append(g); return got.length ? w : h("section");
+}/* ---------- Routing ---------- */
+function go(v, id){ view = {v, id}; location.hash = v === "home" ? "home" : v + "-" + id; render(); }
+function fromHash(){
+  const x = (location.hash || "").slice(1); const m = x.match(/^(lesson|quiz|cert)-(.+)$/); const known = m && LESSONS.some(l => l.id === m[2]);
+  if(m && m[1] === "cert" && (m[2] === "master" ? allEarned() : known && earned(LESSONS[idxOf(m[2])]))) view = {v:"cert", id:m[2]};
+  else if(known && m[1] === "quiz"){ if(view.v !== "quiz" && view.v !== "result") view = {v:"lesson", id:m[2]}; }
+  else if(known && m[1] === "lesson") view = {v:"lesson", id:m[2]};
+  else view = {v:"home"};
+}let lastKey = "";
+function render(keepScroll){
+  const l = view.id ? LESSONS[idxOf(view.id)] : null;
+  if(view.v === "lesson") renderLesson(l); else if(view.v === "quiz") renderQuiz(l); else if(view.v === "result") renderResult(l); else if(view.v === "cert") renderCert(l); else if(view.v === "namegate") renderGate(l); else renderHome();
+  chrome();
+  const key = view.v + (view.id || "") + (view.n || 0);
+  if(keepScroll === true){ const nb = $("#nx"); if(nb) nb.scrollIntoView({block:"nearest"}); const fb = $(".fb"); if(fb) announce(fb.textContent); }
+  else if(key !== lastKey){ focusMain(); }
+  lastKey = key;
+}
+function chrome(){
+  document.documentElement.lang = LANGS[li][0];
+  document.title = t("title");
+  $(".brand .dot").innerHTML = logoSvg(); $("#bt").textContent = t("title"); $("#bs").textContent = t("by"); $("#brand").setAttribute("aria-label", t("title") + " – " + t("over"));
+  $("#skip").textContent = t("skip"); $("#theme").setAttribute("aria-label", t("themeL")); $("#theme").setAttribute("title", t("themeL"));
+  const T = totals(); $("#coins").textContent = "⚽ " + T.co;
+  const lg = $("#langs"); lg.replaceChildren(); LANGS.forEach((x, i) => lg.append(h("button", {type:"button", lang:x[0], "aria-pressed": String(i === li), "aria-label":x[2], onclick:() => { li = i; save(); render(true); }}, x[1])));
+  const f = $("#foot"); f.replaceChildren(h("p", null, "⚽ ", h("a", {href:NURL[li][0], rel:"noopener", text:t("nSite") + " (" + NURL[li][1] + ")"})), h("p", {text:t("disc")}), h("p", {text:t("trans")}), h("p", {text:t("ver") + " " + VERSION + " · " + STAND}));
+}
+$("#brand").onclick = () => go("home");
+$("#theme").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; };
+window.addEventListener("hashchange", () => { fromHash(); render(); });
+/* ---------- PWA: Installieren, Offline, Updates ---------- */
+let deferredInstall = null;
+const isStandalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
+const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
+function installCard(){
+  if(isStandalone()) return h("span");
+  if(!deferredInstall && !isIOS()) return h("span");
+  const c = h("section", {class:"instcard", "aria-labelledby":"it"}, h("span", {class:"ii", "aria-hidden":"true"}, "📲"),
+    h("div", null, h("b", {id:"it", text:t("instT")}), h("small", {text:deferredInstall ? t("instS") : t("instIos")})));
+  if(deferredInstall) c.append(h("button", {type:"button", class:"btn", onclick:async () => { const e = deferredInstall; deferredInstall = null; e.prompt(); try{ await e.userChoice; }catch(x){} render(true); }}, t("instB")));
+  return c;
+}
+function snack(text, btn, fn, ms){
+  const old = document.querySelector(".snack"); if(old) old.remove();
+  const s = h("div", {class:"snack", role:"status"}, h("span", {text}));
+  if(btn) s.append(h("button", {type:"button", onclick:() => { fn(); s.remove(); }}, btn));
+  document.body.append(s); if(ms) setTimeout(() => s.remove(), ms);
+}
+window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredInstall = e; if(view.v === "home" && !editName) render(true); });
+window.addEventListener("appinstalled", () => { deferredInstall = null; if(view.v === "home") render(true); });
+if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){
+  let reloading = false, hadController = !!navigator.serviceWorker.controller;
+  navigator.serviceWorker.addEventListener("controllerchange", () => { if(!hadController){ hadController = true; return; } if(reloading) return; reloading = true; location.reload(); });
+  window.addEventListener("load", () => {
+    const first = !navigator.serviceWorker.controller;
+    navigator.serviceWorker.register("sw.js").then(reg => {
+      const upd = w => snack(t("updT"), t("updB"), () => w.postMessage("SKIP_WAITING"));
+      if(reg.waiting && navigator.serviceWorker.controller) upd(reg.waiting);
+      reg.addEventListener("updatefound", () => { const w = reg.installing; if(w) w.addEventListener("statechange", () => { if(w.state === "installed"){ if(navigator.serviceWorker.controller) upd(w); else snack(t("offT"), null, null, 4500); } }); });
+    }).catch(() => {});
+  });
+}
+fromHash(); render();
+</script>
+</body>
+</html>
