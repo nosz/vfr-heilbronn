@@ -1,6 +1,6 @@
-**⚽ Live ansehen: [https://nosz.github.io/vfrheilbronn](https://nosz.github.io/vfrheilbronn)**
+**⚽ Live ansehen: [https://nosz.github.io/vfr-heilbronn](https://nosz.github.io/vfr-heilbronn)**
 
-[![Stadtclub-Quiz: Was weißt du über den VfR Heilbronn? / What do you know about VfR Heilbronn? / Was woisch du iber da VfR Hoilbronn?](vfrheilbronn_vorschau.jpg)](https://nosz.github.io/vfrheilbronn)
+[![Stadtclub-Quiz: Was weißt du über den VfR Heilbronn? / What do you know about VfR Heilbronn? / Was woisch du iber da VfR Hoilbronn?](vfrheilbronn_vorschau.jpg)](https://nosz.github.io/vfr-heilbronn)
 
 # VFRHEILBRONN: Stadtclub-Quiz
 
@@ -8,7 +8,7 @@
 
 **Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.0.1, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
 
-> **Veröffentlichung (Annahme):** Der Name des GitHub-Repositories wurde noch nicht genannt. Angenommen ist `vfrheilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfrheilbronn/`. Heißt das Repository anders, die Adresse in `index.html` (canonical, og:url, og:image, twitter:image) und in dieser README ersetzen. Alle Dateien der Liste unten ins Hauptverzeichnis legen (ohne Unterordner), GitHub Pages auf den Hauptzweig stellen.
+> **Veröffentlichung:** GitHub-Repository `vfr-heilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfr-heilbronn/`. Alle Dateien (inklusive Icons im Hauptordner) gehören direkt in die Wurzel des Repositories.
 
 ## Inhalt
 Fan-Quiz mit 7 Spieltagen, viel Humor, Zertifikaten und Personalisierung, in **Deutsch, Englisch und Schwäbisch** (Umschalter oben, wird gespeichert).
