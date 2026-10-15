@@ -6,7 +6,7 @@
 
 **Von den VfR Hardcore Fans: Thomas & Nobbe** (inoffizielles Fan-Projekt zu https://www.vfr1896.de/)
 
-**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.2.1, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
+**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.3.0, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
 
 > **Veröffentlichung:** GitHub-Repository `vfr-heilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfr-heilbronn/`. Alle Dateien (inklusive Icons im Hauptordner) gehören direkt in die Wurzel des Repositories.
 
@@ -48,6 +48,7 @@ Farben aus einem Screenshot von vfr1896.de gemessen (Pixelwerte): Kopfbereich `#
 Siehe Änderungsprotokoll.
 
 ## Änderungsprotokoll
+- 1.3.0 (15.10.2026): Fußbereich neu gestaltet: Hinweise (inoffiziell, Übersetzung) in einer Karte mit Info-Symbol, Version als Chip darunter. Der Link zur offiziellen Seite im Fuß entfällt, weil er schon im Bereich Mehr vom Verein steht.
 - 1.2.1 (15.10.2026): Manifest: eigene App-ID (/vfr-heilbronn/) statt "./". Vorher hatten alle Apps auf nosz.github.io dieselbe ID (die Ursprungsadresse) und Android meldete eine App als bereits installiert, obwohl eine andere gemeint war.
 - 1.2.0 (15.10.2026): Klick auf Name ändern oder Name eintragen scrollt das Namensfeld automatisch in den sichtbaren Bereich und setzt den Cursor hinein.
 - 1.1.0 (15.10.2026): Teilen-Symbol in der Kopfzeile (Teilen-Menü des Geräts, sonst Fenster mit WhatsApp, E-Mail, Link kopieren); „Name ändern“ als Button unter Rang, Münzen und Sternen; „Lieber anonym bleiben“ als Button; Klick auf Logo oder Titel bringt nach oben bzw. zur Startseite; Karten unter „Mehr vom Verein“ gleich groß ohne überlaufende Texte.
