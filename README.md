@@ -6,7 +6,7 @@
 
 **Von den VfR Hardcore Fans: Thomas & Nobbe** (inoffizielles Fan-Projekt zu https://www.vfr1896.de/)
 
-**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.0.3, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
+**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.2.0, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
 
 > **Veröffentlichung:** GitHub-Repository `vfr-heilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfr-heilbronn/`. Alle Dateien (inklusive Icons im Hauptordner) gehören direkt in die Wurzel des Repositories.
 
@@ -48,6 +48,9 @@ Farben aus einem Screenshot von vfr1896.de gemessen (Pixelwerte): Kopfbereich `#
 Siehe Änderungsprotokoll.
 
 ## Änderungsprotokoll
+- 1.2.0 (15.10.2026): Klick auf Name ändern oder Name eintragen scrollt das Namensfeld automatisch in den sichtbaren Bereich und setzt den Cursor hinein.
+- 1.1.0 (15.10.2026): Teilen-Symbol in der Kopfzeile (Teilen-Menü des Geräts, sonst Fenster mit WhatsApp, E-Mail, Link kopieren); „Name ändern“ als Button unter Rang, Münzen und Sternen; „Lieber anonym bleiben“ als Button; Klick auf Logo oder Titel bringt nach oben bzw. zur Startseite; Karten unter „Mehr vom Verein“ gleich groß ohne überlaufende Texte.
+- 1.0.4 (14.10.2026): Fix: Wer den Namen leer oder nur mit Leerzeichen bestätigt, kann ihn später über „Name eintragen“ auf der Startseite nachholen.
 - 1.0.3 (14.10.2026): Bayerische Reste entfernt (Servus, Griaß di, Gaudi, Weißbier) und durch Schwäbisches ersetzt (Grüß Gott, Spässle, Trollinger-Pokal); drei neue schwäbische Sprüche (Kehrwoche, Linsen mit Spätzle, Nicht geschimpft).
 - 1.0.2 (14.10.2026): Link-Vorschau (WhatsApp): Open-Graph-Tags stehen jetzt ganz oben im Head (vor dem Favicon), Favicon als Datei statt Inline-Daten, & in Titel maskiert.
 - 1.0.1 (14.10.2026): Logo und Vorschaubild: keine Sterne mehr; Trikot mit "VFR" statt rotem Punkt, Käthchen-Figur mit Fußball, Neckar-Welle und Schriftzug "Käthchenstadt am Neckar"; Fakt zur Käthchenstadt in Spruch-Karte und Spieltag 1.
