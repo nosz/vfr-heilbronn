@@ -1,8 +1,8 @@
 {
-    "name":  "Nintendo Quest – Lernprojekt von Leonie Szpak",
-    "short_name":  "Nintendo Quest",
-    "description":  "Inoffizielles Lernprojekt von Leonie Szpak: Nintendo-Wissen in 7 kurzen Leveln mit Quiz und Zertifikaten. Deutsch, English, 日本語. Läuft auch offline.",
-    "id":  "./",
+    "name":  "Stadtclub-Quiz – Fan-Projekt von Thomas \u0026 Nobbe",
+    "short_name":  "Stadtclub-Quiz",
+    "description":  "Inoffizielles Fan-Projekt der VfR-Hardcore-Fans Thomas \u0026 Nobbe: VfR-Heilbronn-Wissen in 7 Spieltagen mit Quiz, Humor und Zertifikaten. Deutsch, English, Schwäbisch. Läuft auch offline.",
+    "id":  "/vfr-heilbronn/",
     "start_url":  "./",
     "scope":  "./",
     "display":  "standalone",
@@ -12,12 +12,12 @@
                          ],
     "orientation":  "any",
     "background_color":  "#ffffff",
-    "theme_color":  "#e60012",
+    "theme_color":  "#0d0d0d",
     "lang":  "de",
     "dir":  "ltr",
     "categories":  [
-                       "education",
-                       "games"
+                       "sports",
+                       "entertainment"
                    ],
     "prefer_related_applications":  false,
     "icons":  [
