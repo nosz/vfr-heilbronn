@@ -6,7 +6,7 @@
 
 **Von den VfR Hardcore Fans: Thomas & Nobbe** (inoffizielles Fan-Projekt zu https://www.vfr1896.de/)
 
-**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.6.0, Stand 14.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
+**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.7.0, Stand 18.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
 
 > **Veröffentlichung:** GitHub-Repository `vfr-heilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfr-heilbronn/`. Alle Dateien (inklusive Icons im Hauptordner) gehören direkt in die Wurzel des Repositories.
 
@@ -48,6 +48,7 @@ Farben aus einem Screenshot von vfr1896.de gemessen (Pixelwerte): Kopfbereich `#
 Siehe Änderungsprotokoll.
 
 ## Änderungsprotokoll
+- 1.7.0 (18.10.2026): Neu: Auf der Startseite steht direkt nach Begrüßung und Namensfrage der Knopf „Mir gefällt die App, ich möchte sie installieren“ (nur solange die App nicht installiert ist, startet die Installation oder zeigt die Anleitung für iPhone, Android und Computer). Die alte Installieren-Karte ganz unten entfällt. „Installiert“ wird nicht dauerhaft gespeichert, damit der Knopf nach dem Deinstallieren wieder erscheint.
 - 1.6.0 (15.10.2026): Auf jeder Seite außer der Startseite steht unten eine schlanke Fußzeile mit dem Knopf „Zur Startseite“ (Haus-Symbol), damit man immer wieder auf die Startseite kommt (bei Lektion über der Quellen-Karte). Einheitliche Benennung: Der Zurück-Knopf in der festen Leiste heißt jetzt ebenfalls „Startseite“ (vorher „Übersicht“), in Englisch „Home“.
 - 1.5.8 (15.10.2026): Fehler behoben: Die Fortschrittspunkte im Quiz waren in der festen Leiste auf 6 px zusammengefallen und damit unsichtbar. Sie haben jetzt eine Mindestbreite von 90 px und füllen den Rest der Zeile neben „Frage 1 von 4“.
 - 1.5.7 (15.10.2026): Symbol-Schritte der Ablaufleiste auf dem Handy jetzt wirklich mindestens 40 px breit.

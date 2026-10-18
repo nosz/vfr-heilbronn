@@ -314,6 +314,12 @@ h2.secrow .cnt{font-size:.9rem;color:var(--mute);font-weight:700}
 .btn.mastercard{background:#ffc800!important;color:#3b2d00;border:0;box-shadow:0 4px 0 rgba(0,0,0,.2)}
 @page{size:A4 landscape;margin:8mm}
 @media print{body{background:#fff}main>*:not(.certbox){display:none!important}.certbox{box-shadow:none;border:0;padding:0;margin:0}footer{display:none}}
+.install-cta{display:flex;align-items:center;gap:12px;width:100%;margin:14px 0 0;padding:12px 14px;text-align:left;border-radius:var(--r);border:2px solid var(--red);background:var(--red-l);color:var(--ink);box-shadow:var(--shadow);cursor:pointer;font:inherit;min-height:48px}
+.install-cta:hover{border-color:var(--red-d)}.install-cta:focus-visible{outline:3px solid var(--red);outline-offset:2px}
+.install-cta .ic-ico{flex:none;width:44px;height:44px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:1.4rem;background:var(--card)}
+.install-cta .ic-text{flex:1;min-width:0;display:flex;flex-direction:column;gap:2px}.install-cta .ic-text b{font-size:1rem;line-height:1.3}.install-cta .ic-text small{font-size:.85rem;color:var(--mute);line-height:1.35}.install-cta .ic-go{flex:none;font-weight:800;color:var(--red-d)}
+.instol{margin:10px 0 0;padding-left:22px}.instol li{margin:8px 0}
+@media print{.install-cta{display:none}}
 @media(prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important;scroll-behavior:auto!important}}
 @media print{.top,.sticky,.lang{display:none}}
 </style>
@@ -333,7 +339,7 @@ h2.secrow .cnt{font-size:.9rem;color:var(--mute);font-weight:700}
 <div id="live" class="sr" aria-live="polite"></div>
 <script>
 "use strict";
-const VERSION = "1.6.0", STAND = "15.10.2026";
+const VERSION = "1.7.0", STAND = "18.10.2026";
 const LANGS = [["de","DE","Deutsch"],["en","EN","English"],["swg","SCHWÄB","Schwäbisch"]];
 const KEY = "vfr_stadtclub_v1";
 let li = 0, prog = {}, nm = "", ach = {}, view = {v:"home"};
@@ -390,7 +396,17 @@ const S = {
  instS:["Startet wie eine App und läuft auch ohne Internet.","Opens like an app and works without internet.","Startet wia a App ond lauft au ohne Internet."],
  instB:["Installieren","Install","Installiera"],
  instIos:["Auf dem iPhone: Teilen-Symbol antippen, dann „Zum Home-Bildschirm“.","On iPhone: tap the Share icon, then “Add to Home Screen”.","Uff am iPhone: Teila-Symbol antippa, no „Zom Home-Bildschirm“."],
- updT:["Neue Version verfügbar","New version available","Neue Version do"],
+ instHow:["So geht’s","How to","So goht’s"],
+ instCta:["Mir gefällt die App, ich möchte sie installieren","I like the app, I want to install it","Mir gfällt die App, i möcht sia installiera"],
+ instCtaS:["Ein Tipp, und sie liegt auf deinem Startbildschirm. Gratis, auch ohne Internet.","One tap and it sits on your home screen. Free, and it works offline too.","A Tipp, ond sia liegt uff deim Startbildschirm. Gratis, au ohne Internet."],
+ instIosT:["App auf dem iPhone installieren","Install the app on iPhone","App uff am iPhone installiera"],
+ instI1:["Tippe in Safari auf das Teilen-Symbol (Quadrat mit Pfeil nach oben, in der unteren oder oberen Leiste).","In Safari, tap the Share icon (square with an arrow pointing up, in the bottom or top bar).","Tipp en Safari uff s Teila-Symbol (Quadrat mit Pfeil nach obe, en dr ondera oder obera Leischt)."],
+ instI2:["Scrolle im Menü und wähle „Zum Home-Bildschirm“.","Scroll the menu and choose “Add to Home Screen”.","Scroll em Menü ond wähl „Zom Home-Bildschirm“."],
+ instI3:["Tippe oben rechts auf „Hinzufügen“. Danach startet das Stadtclub-Quiz wie eine App.","Tap “Add” at the top right. The Stadtclub Quiz then opens like an app.","Tipp obe rechts uff „Hinzufüga“. Danach startet s Stadtclub-Quiz wia a App."],
+ instINote:["Hinweis: Gemeint ist das Teilen-Symbol von Safari, nicht ein Symbol in der App.","Note: this is Safari’s Share icon, not an icon inside the app.","Hinweis: Gmoint isch s Teila-Symbol vo Safari, ned a Symbol en dr App."],
+ instMenuT:["App installieren","Install the app","App installiera"],
+ instMenu:["Öffne das Browser-Menü (⋮) und wähle „App installieren“ oder „Zum Startbildschirm hinzufügen“. Am Computer findest du das Installieren-Symbol auch in der Adressleiste.","Open the browser menu (⋮) and choose “Install app” or “Add to Home screen”. On a computer you also find the install icon in the address bar.","Mach s Browser-Menü uff (⋮) ond wähl „App installiera“ oder „Zom Startbildschirm hinzufüga“. Am Computer isch s Installiera-Symbol au en dr Adressleischt."],
+ instCancel:["Installation abgebrochen? Kein Problem, du kannst jederzeit neu starten.","Installation cancelled? No problem, you can start again any time.","Installation abbrocha? Koi Problem, du kasch jederzeit nei starta."], updT:["Neue Version verfügbar","New version available","Neue Version do"],
  updB:["Aktualisieren","Update","Aktualisiera"],
  offT:["Bereit für den Offline-Betrieb ✓","Ready for offline use ✓","Bereit fir ohne Internet ✓"],
  moreN:["Mehr vom VfR Heilbronn entdecken","Discover more about VfR Heilbronn","Mehr vom VfR Hoilbronn entdecka"],
@@ -748,6 +764,7 @@ h("div", {class:"stats", role:"list"},
       requestAnimationFrame(() => { form.scrollIntoView({behavior: rm ? "auto" : "smooth", block:"center"}); inp.focus({preventScroll:true}); inp.select(); });
     }
   }
+  m.append(installCta());
   if(nextL){
     const first = started ? h("button", {type:"button", class:"choice pri", onclick:() => go("lesson", nextL.id)}, h("span", {class:"ci", "aria-hidden":"true"}, nextL.ico), h("span", null, h("b", {text:t("contB")}), h("small", {text:nextL.t[li]})))
                           : h("button", {type:"button", class:"choice pri", onclick:() => go("lesson", LESSONS[0].id)}, h("span", {class:"ci", "aria-hidden":"true"}, "🌱"), h("span", null, h("b", {text:t("newB")}), h("small", {text:t("newS")})));
@@ -771,7 +788,6 @@ h("div", {class:"stats", role:"list"},
     g.append(cell);
   });
   m.append(g);
-  m.append(installCard());
   m.append(vfrLinks());
   m.append(h("p", {style:"margin-top:26px;text-align:center"}, h("button", {type:"button", class:"btn ghost", onclick:() => { if(confirm(t("resetQ"))){ prog = {}; save(); render(); } }}, "↺ " + t("reset"))));
 }
@@ -1080,18 +1096,29 @@ $("#share").onclick = openShare;
 $("#theme").onclick = () => { const r = document.documentElement; const dark = r.dataset.theme ? r.dataset.theme === "dark" : matchMedia("(prefers-color-scheme: dark)").matches; r.dataset.theme = dark ? "light" : "dark"; };
 window.addEventListener("hashchange", () => { fromHash(); render(); });
 /* ---------- PWA: Installieren, Offline, Updates ---------- */
-let deferredInstall = null;
+let deferredInstall = null, installState = "";   // installState: "" | "cancelled" | "done"
 const isStandalone = () => matchMedia("(display-mode: standalone)").matches || navigator.standalone === true;
 const isIOS = () => /iphone|ipad|ipod/i.test(navigator.userAgent) || (navigator.platform === "MacIntel" && navigator.maxTouchPoints > 1);
-function installCard(){
-  if(isStandalone()) return h("span");
-  if(!deferredInstall && !isIOS()) return h("span");
-  const c = h("section", {class:"instcard", "aria-labelledby":"it"}, h("span", {class:"ii", "aria-hidden":"true"}, "📲"),
-    h("div", null, h("b", {id:"it", text:t("instT")}), h("small", {text:deferredInstall ? t("instS") : t("instIos")})));
-  if(deferredInstall) c.append(h("button", {type:"button", class:"btn", onclick:async () => { const e = deferredInstall; deferredInstall = null; e.prompt(); try{ await e.userChoice; }catch(x){} render(true); }}, t("instB")));
-  return c;
+function hilfeDialog(titel, kids){
+  document.querySelectorAll(".shdlg").forEach(d => d.remove());
+  const d = h("dialog", {class:"shdlg", "aria-labelledby":"iht"}, h("button", {type:"button", class:"shx", "aria-label":t("shX"), onclick:() => d.close()}, "✕"), h("p", {class:"shh"}, h("b", {id:"iht", text:titel})), ...kids);
+  d.addEventListener("click", ev => { if(ev.target === d) d.close(); }); d.addEventListener("close", () => d.remove());
+  document.body.append(d); d.showModal();
 }
-const SHARE_URL = "https://nosz.github.io/vfr-heilbronn/";
+const iosHelp = () => hilfeDialog(t("instIosT"), [h("ol", {class:"instol"}, h("li", {text:t("instI1")}), h("li", {text:t("instI2")}), h("li", {text:t("instI3")})), h("p", {class:"shh"}, h("small", {text:t("instINote")}))]);
+const menuHelp = () => hilfeDialog(t("instMenuT"), [h("p", {text:installState === "cancelled" ? t("instCancel") + " " + t("instMenu") : t("instMenu")})]);
+async function doInstall(){
+  const e = deferredInstall; if(!e) return; let res = null;
+  try{ await e.prompt(); res = await e.userChoice; }catch(x){}
+  deferredInstall = null; installState = res && res.outcome === "accepted" ? "done" : "cancelled"; render(true);
+}
+/* Knopf auf der Startseite: nur solange die App nicht installiert ist, damit niemand in Einstellungen suchen muss */
+const installAction = () => { if(deferredInstall) doInstall(); else if(isIOS()) iosHelp(); else menuHelp(); };
+function installCta(){
+  if(isStandalone() || installState === "done") return h("span");
+  return h("button", {type:"button", class:"install-cta", id:"installCta", "aria-haspopup":"dialog", onclick:installAction},
+    h("span", {class:"ic-ico", "aria-hidden":"true"}, "📲"), h("span", {class:"ic-text"}, h("b", {text:t("instCta")}), h("small", {text:t("instCtaS")})), h("span", {class:"ic-go", "aria-hidden":"true"}, "→"));
+}const SHARE_URL = "https://nosz.github.io/vfr-heilbronn/";
 function openShare(){
   if(navigator.share){ navigator.share({title:t("shSubj"), text:t("shMsg"), url:SHARE_URL}).catch(() => {}); return; }
   document.querySelectorAll(".shdlg").forEach(d => d.remove());
@@ -1121,7 +1148,7 @@ function snack(text, btn, fn, ms){
   document.body.append(s); if(ms) setTimeout(() => s.remove(), ms);
 }
 window.addEventListener("beforeinstallprompt", e => { e.preventDefault(); deferredInstall = e; if(view.v === "home" && !editName) render(true); });
-window.addEventListener("appinstalled", () => { deferredInstall = null; if(view.v === "home") render(true); });
+window.addEventListener("appinstalled", () => { deferredInstall = null; installState = "done"; if(view.v === "home") render(true); });
 if("serviceWorker" in navigator && /^https?:$/.test(location.protocol)){
   let reloading = false, hadController = !!navigator.serviceWorker.controller;
   navigator.serviceWorker.addEventListener("controllerchange", () => { if(!hadController){ hadController = true; return; } if(reloading) return; reloading = true; location.reload(); });
