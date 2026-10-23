@@ -6,7 +6,7 @@
 
 **Von den VfR Hardcore Fans: Thomas & Nobbe** (inoffizielles Fan-Projekt zu https://www.vfr1896.de/)
 
-**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.7.3, Stand 23.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
+**Datei:** `index.html` (eine Datei, offline lauffähig, Version 1.7.4, Stand 23.10.2026). Einfach im Browser öffnen oder auf einem Webserver ablegen.
 
 > **Veröffentlichung:** GitHub-Repository `vfr-heilbronn` unter dem Benutzer `nosz`, also `https://nosz.github.io/vfr-heilbronn/`. Alle Dateien (inklusive Icons im Hauptordner) gehören direkt in die Wurzel des Repositories.
 
@@ -48,6 +48,7 @@ Farben aus einem Screenshot von vfr1896.de gemessen (Pixelwerte): Kopfbereich `#
 Siehe Änderungsprotokoll.
 
 ## Änderungsprotokoll
+- 1.7.4 (23.10.2026): **Autoren-Knopf** mit deutlichem Link-Symbol, Symbol für externe Seite und sichtbarer Adresse. **Name-Knopf heißt jetzt „Speichern“** (statt „Das bin ich“), mit Speichern-Symbol; er ist grau, solange das Feld leer ist, wird aktiv und pulsiert bei neuem Text und zeigt „Gespeichert“ (grün), wenn nichts mehr zu speichern ist; nach dem Speichern erscheint eine Bestätigung. Version angehoben.
 - 1.7.3 (23.10.2026): Autoren-Hinweis im Fuß als auffälliger Knopf überarbeitet (ganzer Text ist der Link auf https://nosz.github.io/norbert-szpak/); Version angehoben, alle Tests und die Link-Pflicht-Prüfung erneut.
 - 1.7.2 (23.10.2026): Im Fuß steht jetzt „Website Design by Norbert“ statt „Created by Norbert“ (auffälliger Knopf unter der Version, der ganze Text ist der Link auf https://nosz.github.io/norbert-szpak/).
 - 1.7.1 (20.10.2026): Im Fuß der Startseite steht neben der Version statt des Datums der Link „Created by Norbert“ (gleiches Design, öffnet https://nosz.github.io/norbert-szpak in einem neuen Tab).
